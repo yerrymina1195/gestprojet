@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jeemacoder chalenge</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <!--LINK Font Awesone-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="dashbord.css">
+</head>
+
+<body>
+  
+  <div class="">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top p-4 fall">
+      <div class="container">
+        <div class="offset-md-3">
+          <form class="d-flex align-items-center border p-2 border-info rounded-3 ">
+            <img src="./image/Icon.png" class="icon" alt="ma photo">
+            <!-- <i class="fa fa-search pt-2 px-3 mx"></i>  -->
+            <input class="form  border-0 me-2" type="search" placeholder="Recherche" aria-label="Search">
+          </form>
+        </div>
+        <div class="d-none d-sm-block">
+          <p>Dieynaba Ly</p>
+        </div>
+        <div class="border-0    flechete d-block d-sm-none     d-flex align-items-center justify-content-end">
+          <a class=" d-flex align-items-center justify-content-center rounded-circle " data-bs-toggle="offcanvas"
+            href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+            <i class="fas fa-bars"></i>
+          </a>
+
+        </div>
+
+    </nav>
+  </div>
+  <div class="container-fluid ">
+    <div class="row">
+      <div class="col-sm-2 d-sm-block   pt-3 position-relative ">
+        <div class="d-md-none d-flex flex-column test close  bg-white position-fixed    ">
+
+          <div class="d-flex mb-2 p-3 justify-content-center">
+            <a href="./dashbord.html" class=" yerry p-2  w-100 text-center   " data-bs-toggle="tooltip"
+              data-bs-placement="right" title="Dashboars">
+              <img src="./image/icon4.png" alt="photo" class="icon5  img-fluid ">
+            </a>
+
+          </div>
+          <div class="d-flex mb-2 justify-content-center   ">
+
+
+            <div class="accordion  " id="accordionExample">
+
+              <div class="accordion-item bg-transparent   border-0">
+                <h5 class="accordion-header p-3" id="headingTwi">
+                  <button class=" collapsed border-0 bg-transparent merry px-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwi" aria-expanded="false" aria-controls="collapseTwo">
+                    <img src="./image/icon0.png" alt="photo" class="icon5 img-fluid w-100  " data-bs-toggle="tooltip"
+                      data-bs-placement="right" title="USERS">
+
+                  </button>
+                </h5>
+                <div id="collapseTwi" class="accordion-collapse collapse h-100" aria-labelledby="headingTwi"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body d-flex flex-column   p-0">
+                    <a class=" yerry px-4 py-2  mb-2 " href="../users/eleves/bulletin.html">eleve</a>
+                    <a class=" yerry p-2  mb-2  " href="../users/professeurs/listeEleve.html">professeur</a>
+                    <a class=" yerry p-2   " href=" ../users/personnelles/index.html ">personnels</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="d-flex mb-2 justify-content-center">
+            <a href="../comptabilité/index.html" class="  yerry p-3 w-100 text-center  " data-bs-toggle="tooltip" data-bs-placement="right"
+              title="comptablité">
+              <img src="./image/icon1.png" alt="photo" class="icon5   img-fluid ">
+
+            </a>
+          </div>
+          <div class="d-flex mb-2 justify-content-center ">
+            <a href="../statistiques/index.html" class=" text-center yerry  p-3 w-100" data-bs-toggle="tooltip" data-bs-placement="right"
+              title="statistiques">
+              <img src="./image/icon2.png" alt="photo" class="icon5 img-fluid ">
+
+            </a>
+          </div>
+          <div class="d-flex  justify-content-center p-3 ">
+            <a href="../pointage/pointage.html" class=" text-center  yerry  p-2 w-100 " data-bs-toggle="tooltip" data-bs-placement="right"
+              title="Pointage">
+              <img src="./image/icon3.png" alt="photo" class="icon5 img-fluid ">
+
+            </a>
+          </div>
+
+
+
+
+          <div class="offcanvas offcanvas-start CHANGED" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasExampleLabel">MENU</h5>
+              <button type="button" class=" border-0 bg-transparent rounded-circle flechete text-reset"
+                data-bs-dismiss="offcanvas" aria-label="Close">
+                <i class="fas fa-arrow-left"></i>
+              </button>
+            </div>
+            <div class="offcanvas-body">
+              <div class="col-12 mina ps-4">
+                <div class="dash d-flex mb-3 ">
+                  <a href="./dashbord.html" class="d-flex align-items-center baba p-2 w-100  ">
+                    <img src="./image/icon4.png" alt="photo" class="icon4 img-fluid ">
+                    <p class=" ms-4 mb-0">Dashboars</p>
+                  </a>
+                </div>
+                <div class=" d-flex mb-3 ">
+
+
+                  <div class="accordion p-2 w-100 " id="accordionExample">
+
+                    <div class="accordion-item bg-transparent   border-0">
+                      <h5 class="accordion-header  " id="headingTwa">
+                        <button
+                          class=" collapsed border-0 bg-transparent w-100 d-flex px-0  justify-content-between align-items-center "
+                          type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwa" aria-expanded="false"
+                          aria-controls="collapseTwa">
+                          <img src="./image/icon0.png" alt="photo" class="icon4 img-fluid ">
+                          <p class="mb-0 nam ">Users</p>
+                          <img src="./image/icon6.png" class="img-fluid " alt="">
+                        </button>
+                      </h5>
+                      <div id="collapseTwa" class="accordion-collapse collapse  " aria-labelledby="headingTwa"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body  d-flex flex-column px-0">
+                          <a class="baba  mb-3" href="../users/eleves/bulletin.html">eleve</a>
+                          <a class="baba mb-3" href="../users/professeurs/listeEleve.html">professeur</a>
+                          <a class="baba" href="../users/personnelles/index.html">personnels</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class=" d-flex    mb-3 ">
+                  <a href="../comptabilité/index.html" class="d-flex align-items-center baba p-2 w-100  ">
+                    <img src="./image/icon1.png" alt="photo" class="icon4  img-fluid ">
+                    <p class="ms-4 mb-0 ">Comptabilite</p>
+                  </a>
+                </div>
+
+                <div class=" d-flex mb-3  ">
+                  <a href="../statistiques/index.html" class="d-flex align-items-center p-2 w-100 baba   ">
+                    <img src="./image/icon2.png" alt="photo" class="icon4 img-fluid ">
+                    <p class="ms-4 mb-0">Statistique</p>
+                  </a>
+                </div>
+                <div class=" d-flex  ">
+                  <a href="../pointage/pointage.html" class="d-flex align-items-center p-2 w-100 baba  ">
+                    <img src="./image/icon3.png" alt="photo" class="icon4 img-fluid ">
+                    <p class="ms-4 mb-0">Pointage</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container d-none d-md-block px-2 pt-5 py-3 bg-white position-fixed site">
+          <div class="row mx-auto">
+
+            <div class="col-12 mina ">
+              <div class="dash d-flex  mb-3 ">
+                <a href="dashbord.html" class="d-flex align-items-center baba p-2 w-100  ">
+                  <img src="./image/icon4.png" alt="photo" class="icon4 img-fluid ">
+                  <p class=" ms-4 mb-0">Dashboars</p>
+                </a>
+              </div>
+              <div class=" d-flex mb-3 ">
+
+
+                <div class="accordion p-2 w-100 " id="accordionExample">
+
+                  <div class="accordion-item bg-transparent   border-0">
+                    <h5 class="accordion-header  p-1 w-100 " id="headingTwo">
+                      <button
+                        class=" collapsed border-0 bg-transparent w-100 d-flex px-0   justify-content align-items-center "
+                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                        aria-controls="collapseTwo">
+                        <img src="./image/icon0.png" alt="photo" class="icon4 img-fluid ">
+                        <p class="mb-0 nam ms-4  me-5">Users</p>
+                        <img src="./image/icon6.png" class="img-fluid " alt="">
+                      </button>
+                    </h5>
+                    <div id="collapseTwo" class="accordion-collapse collapse  " aria-labelledby="headingTwo"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body  d-flex flex-column px-0">
+                        <a class="baba  mb-3" href="../users/eleves/bulletin.html">eleve</a>
+                        <a class="baba mb-3" href="../users/professeurs/listeEleve.html">professeur</a>
+                        <a class="baba" href=" ../users/personnelles/index.html">personnels</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class=" d-flex    mb-3 ">
+                <a href="../comptabilité/index.html" class="d-flex align-items-center baba p-2 w-100  ">
+                  <img src="./image/icon1.png" alt="photo" class="icon4  img-fluid ">
+                  <p class="ms-4 mb-0 ">Comptabilite</p>
+                </a>
+              </div>
+
+              <div class=" d-flex mb-3  ">
+                <a href="../statistiques/index.html" class="d-flex align-items-center p-2 w-100 baba   ">
+                  <img src="./image/icon2.png" alt="photo" class="icon4 img-fluid ">
+                  <p class="ms-4 mb-0">Statistique</p>
+                </a>
+              </div>
+              <div class=" d-flex  ">
+                <a href="../pointage/pointage.html" class="d-flex align-items-center p-2 w-100 baba  ">
+                  <img src="./image/icon3.png" alt="photo" class="icon4 img-fluid ">
+                  <p class="ms-4 mb-0">Pointage</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- c'est dans cette colonne que vous allez mettre votre contenu ou tableau et svp non touche au javascripte -->
+      <!-- Enlevez juste le lorem ipsum et mettez y les travaux effectués s'il ya un probleme suis disponible -->
+
+      <div class="col-sm-9 offset-sm-1 selection py-5 position-relative">
+        
+        <div class="container px-0">
+          <div class="row align-items-center ">
+            <div class="col-md-6 ">
+
+              <div class="card  shadow " style="border-radius: 28px;">
+
+                <h6 class="mt-3 ms-3"> Année scolaire 2020/2021</h6>
+
+                <div class="card-body ">
+                  <div class="row    ">
+                    <div class="col vegeta text-white py-5 ">
+                      <div class="tittle mb-4 ">
+                        <h4>Eleves</h4>
+                        <p class="font-monospace">liste de tous les eleves</p>
+                      </div>
+                      <div class="counting mb-5">
+                        <p id="nbr_eleves"></p>
+                      </div>
+
+                    </div>
+
+                    <!-- <div class="col-lg-4 trunk text-md-end   ">
+                      <div class="  border-start border-3 h-100   me-0 pe-0  ps-2">
+                        <div class="nb">
+                          <h4 ></h4>
+                          <p class="font-lato">Liste des inscrits</p>
+                        </div>
+                        <div class="nc">
+                          <h4>$ 1500 .50</h4>
+                          <p class="font-lato">Somme inscription</p>
+                        </div>
+                        <div class="nd">
+                          <h4>$ 360 .60</h4>
+                          <p class="font-lato">Recouvrement</p>
+                        </div>
+                      </div>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 my-2 col-lg-3">
+
+             
+
+                
+                  <div class="card mx-auto shadow p-2 tri " style=" border-radius: 40px; height: 220px;">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                      <div>
+                        <h5 class="card-title">PROFESSEURS</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Liste des professeurs</h6>
+                      </div>
+                      <p class="card-text display-6 fw-bold text-primary" id="nbr_professeurs"></p>
+                    </div>
+                  </div>
+              
+
+             
+
+             
+
+            </div>
+            <div class="col-md-4 my-2 col-lg-3">
+            
+                <div class="card mx-auto shadow p-2 tri" style=" border-radius: 40px; height: 220px;">
+                  <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                      <h5 class="card-title">PERSONNELLES</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">Liste du personnelles</h6>
+                    </div>
+                    <p class="card-text display-6 fw-bold text-primary" id="nbr_personnel"></p>
+                  </div>
+                </div>
+             
+            </div>
+          </div>
+
+          <div class=" generic container-fluid d-flex justify-content-between ">
+            <div class="row">
+              <div class="col-6 my-5 text-center">
+                <button class="btn buttonAdd" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ajouter un
+                  professeur
+                  <i class="fa-solid fa-plus p-1 ms-2  rounded-circle text-white"></i>
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                  tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-lg ">
+                    <div class="modal-content">
+                      <div class="modal-header bg-primary">
+                        <!-- id="staticBackdropLabel" -->
+                        <h1 class="modal-title fs-5 text-capitalize text-white text-center" id="titleModal">Ajouter un professeur </h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body  text-start" id="modalBody">
+                        <!-- <h5 class="text-center"></h5> -->
+                        <form class="" id="">
+                          <div class="container-fluid">
+                            <div class="row p-5">
+
+                              <div class="col-6">
+                                <div class="input-group mb-3">
+                                  <span class="input-group-text" >Prenom</span>
+                                  <input type="text" class="form-control" aria-label="Username"
+                                    aria-describedby="basic-addon1" id="prenomProf" required>
+                                </div>
+                              </div>
+
+                              <div class="col-6">
+                                <div class="input-group mb-3">
+                                  <span class="input-group-text" >Nom</span>
+                                  <input type="text" class="form-control" aria-label="Username"
+                                    aria-describedby="basic-addon1" id="nomProf" required>
+                                </div>
+                              </div>
+
+                              <div class="col-6">
+                                <div class="input-group mb-3">
+                                  <span class="input-group-text" >Date de Naissance</span>
+                                  <input type="date" class="form-control" aria-label="Username"
+                                    aria-describedby="basic-addon1" id="naissanceProf" required>
+                                </div>
+                              </div>
+
+                              <div class="col-6">
+                                <div class="input-group mb-3">
+                                  <span class="input-group-text" >Lieux</span>
+                                  <input type="text" class="form-control" aria-label="Username"
+                                    aria-describedby="basic-addon1" id="lieuxProf" required>
+                                </div>
+                              </div>
+
+                              <div class="col-6">
+                                <div class="input-group mb-3">
+                                  <span class="input-group-text" >phone</span>
+                                  <input type="tel" class="form-control" aria-label="Username"
+                                    aria-describedby="basic-addon1" id="numProf" required>
+                                </div>
+                              </div>
+
+                              <div class="col-6">
+                                <div class="input-group mb-3">
+                                  <span class="input-group-text" >Email</span>
+                                  <input type="email" required class="form-control" id="mailProf" aria-label="Username"
+                                    aria-describedby="basic-addon1">
+                                </div>
+                              </div>
+
+                              <div class="col-6">
+                                <div class="input-group  mb-3">
+                                  <span class="input-group-text" >Addresse</span>
+                                  <input type="text" required class="form-control" id="addresseProf"
+                                    aria-label="Username" aria-describedby="basic-addon1">
+                                </div>
+                              </div>
+
+                              <div class="col-6">
+                                <div class="input-group  mb-3">
+                                  <span class="input-group-text" >Matière</span>
+                                  <select class="form-select" aria-label="Default select example" id="matiereProf"
+                                    required>
+                                    <option selected disabled>Choisir une matière</option>
+                                    <option value="Mathématique">Mathématique</option>
+                                    <option value="Physique & Chimie">Physique & Chimie</option>
+                                    <option value="Français">Français</option>
+                                    <option value="Anglais">Anglais</option>
+                                    <option value="Histoir & Géographie">Histoir & Géographie</option>
+                                    <option value="">Education Physique</option>
+                                  </select>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                      </div>
+                      <div class="modal-footer">
+                        <input type="submit" id="listProf-form" value="Ajouter un professeur" class="btn btn-outline-primary">
+                        <input type="submit" id="modiffff" value="modifier un professeur" class="btn btn-outline-success btnModif">
+                      </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <input type="text" id="myInput" class="filt" onkeyup="filterTable()" placeholder="rechercher...">
+
+              </div>
+            </div>
+          </div>
+
+          <div class="container-fluid" style="overflow-x:scroll ;">
+            <table class="table table-borderless responsive" id="table">
+              <thead class="entet">
+                <tr>
+                  <th>Prenom</th>
+                  <th>Nom</th>
+                  <th>Numéro de téléphone</th>
+                  <th>Mail</th>
+                  <th>Addresse</th>
+                  <th>Matière</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="liste-prof">
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="position-relative">
+          <div id="loade">
+            <div class="spinner"></div>
+          </div>
+        </div>
+
+        <script src="dashbord.js" type="module"></script>
+        <script src="filtre.js"></script>
+        <script type="module" src="./js_gestion.js"></script>
+        
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+          integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+          crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+          integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+          crossorigin="anonymous"></script>
+        <!--KIT.FONT AWESOME-->
+        <script src="https://kit.fontawesome.com/e5c1f80f7e.js" crossorigin="anonymous"></script>
+
+    </body>
+</html> 

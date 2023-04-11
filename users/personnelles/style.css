@@ -1,0 +1,185 @@
+/* ===============pas touche au css deja present ============= */
+
+<<<<<<< HEAD
+/* 
+=======
+
+>>>>>>> 243686a8fffa6cd953f82672fb3b057a6adcf014
+.fall {
+    z-index: 1;
+}
+.icon4{
+    Width : 20px;
+    Height :20px;
+    
+} 
+.selection{
+    margin-top: 100px;
+}
+.flechete{
+    height: 30px;
+    width: 30px;
+    
+}
+.fall input:focus{
+    outline: none !important;
+}
+.icon5{
+height: 30px;
+width: 30px;
+}
+.fas {
+    color: blue;
+    font-size: 30px;
+    
+}
+body{
+    background: #F5F5F5;
+   
+}
+a, .nam{
+  text-decoration: none; 
+  color: #C7C7C7;
+   
+}
+.mina a:hover, .accordion-header:hover, .nam:hover
+{
+    background: #F0F7FF;
+    color: aqua;
+}
+.mina a.active{
+    background: #F0F7FF;
+    color: aqua ;
+}
+.test a:hover, .test a.active{
+    background: #F0F7FF;
+
+}
+
+.site{
+    background: #FFFFFF;
+box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
+border-radius: 50px;
+height: 620px;
+width: 200px;
+top: 10px;
+z-index: 2;
+<<<<<<< HEAD
+/* display: none; 
+}
+
+
+/* parties  test 
+=======
+/* display: none; */
+}
+
+
+/* parties  test */
+>>>>>>> 243686a8fffa6cd953f82672fb3b057a6adcf014
+.test{
+    width: 200px;
+    padding: 10px 14px;
+    border-radius: 50px;
+   
+    z-index: 2;
+    
+}
+.CHANGED{
+    width: 250px;
+    border-radius: 50px;
+}
+
+.test .text{
+opacity: 1;
+}
+.test.close{
+width: 115px;
+}
+.test.close .text{
+   opacity: 0;
+}
+
+@media (max-width:867px){
+
+.site{
+    background: #FFFFFF;
+box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
+border-radius: 50px;
+height: 620px;
+width: 250px;
+top: 10px;
+z-index: 2;
+display: none !important;
+}
+.test{
+    width: 200px;
+    padding: 10px 14px;
+    border-radius: 50px;
+    top: 65px;
+    z-index: 2;
+    display: block !important;
+}
+.flechete{
+    display: none !important;
+}
+}
+@media (max-width:450px){
+    .flechete{
+        display: block !important;
+    }
+    .yerry, .merry{
+<<<<<<< HEAD
+        display: none;
+=======
+display: none;
+>>>>>>> 243686a8fffa6cd953f82672fb3b057a6adcf014
+    }
+    .test{
+        margin-top: 30px;
+        height: 120px !important;
+        width: 80px !important;
+    }
+<<<<<<< HEAD
+} */
+=======
+}
+>>>>>>> 243686a8fffa6cd953f82672fb3b057a6adcf014
+
+/* ======================= fin du css pour le dashbords vous pouvez mettre votre css en bas================= */
+
+
+
+
+
+<<<<<<< HEAD
+/* ===========top c'est parti============ */
+
+
+/* ========= MOHAMED SARIFOU DIALLO ========= */
+
+body{
+    font-family: Arial, Helvetica, sans-serif
+}
+
+<<<<<<< HEAD
+.filtre{
+    top: 48px;
+}
+=======
+/* ===========top c'est parti============ */
+>>>>>>> 243686a8fffa6cd953f82672fb3b057a6adcf014
+=======
+.tabcoul{
+    background-color:#ececec ;
+}
+
+.modalajou{
+    background: #c5bebe;
+}
+
+input[type=text2]{
+    background-color: #ececec;
+    border: none;
+}
+>>>>>>> f33669e465e9ef03cc6342aabf48c4e2e1314b6f

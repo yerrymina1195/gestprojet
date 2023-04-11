@@ -1,0 +1,262 @@
+/* ===============pas touche au css deja present ============= */
+
+
+.fall {
+    z-index: 1;
+}
+.icon4{
+    Width : 20px;
+    Height :20px;
+    
+} 
+.selection{
+    margin-top: 100px;
+}
+.flechete{
+    height: 30px;
+    width: 30px;
+    
+}
+.fall input:focus{
+    outline: none !important;
+}
+.icon5{
+height: 30px;
+width: 30px;
+}
+.fas {
+    color: blue;
+    font-size: 30px;
+    
+}
+body{
+    background: #FBFCFE;
+   
+    overflow-x: hidden;
+}
+a, .nam{
+  text-decoration: none; 
+  color: #C7C7C7;
+   
+}
+.mina a:hover, .accordion-header:hover
+{
+    background: #F0F7FF;
+    color: aqua;
+}
+.accordion-header:hover  .nam{
+    color: aqua;
+}
+.mina a.active{
+    background: #F0F7FF;
+    color: aqua ;
+}
+.test a:hover, .test a.active{
+    background: #F0F7FF;
+
+}
+
+.site{
+    background: #FFFFFF;
+box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
+border-radius: 50px;
+height: 620px;
+width: 200px;
+top: 10px;
+z-index: 2;
+/* display: none; */
+}
+
+
+/* parties  test */
+.test{
+    width: 200px;
+    padding: 10px 14px;
+    border-radius: 50px;
+   
+    z-index: 2;
+    
+}
+.CHANGED{
+    width: 250px;
+    border-radius: 50px;
+}
+
+.test .text{
+opacity: 1;
+}
+.test.close{
+width: 115px;
+}
+.test.close .text{
+   opacity: 0;
+}
+
+
+
+@media (min-width:1160px){
+
+
+
+    .site{
+        background: #FFFFFF;
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    height: 620px;
+    width: 280px;
+    top: 10px;
+    z-index: 2;
+    /* display: none; */
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+@media (max-width:867px){
+
+.site{
+    background: #FFFFFF;
+box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
+border-radius: 50px;
+height: 620px;
+width: 250px;
+top: 10px;
+z-index: 2;
+display: none !important;
+}
+.test{
+    width: 200px;
+    padding: 10px 14px;
+    border-radius: 50px;
+    top: 70px;
+    z-index: 2;
+    display: block !important;
+}
+.flechete{
+    display: none !important;
+}
+}
+@media (max-width:575px){
+    .flechete{
+        display: block !important;
+    }
+    .yerry, .merry{
+display: none;
+    }
+    .test{
+        margin-top: 30px;
+        height: 120px !important;
+        width: 80px !important;
+        background-color: transparent !important;
+    }
+    .test.close{
+       
+        margin-top: 550px;
+       
+     }
+}
+
+/* ======================= fin du css pour le dashbords vous pouvez mettre votre css en bas================= */
+
+/* #myChart{
+    width: 90px;
+} */
+
+
+
+/* ===========top c'est parti============ */
+
+
+
+
+
+/* <!-- ----------------------------------- debut Tableau statistique -------------------------------->
+                  <div class="row text-primary fw-bold bg-light shadow p-3 mb-5 bg-body rounded">
+                    <p>Tableau des statistiques</p>
+                    <!-- <canvas height="200" id="myChart"></canvas> -->
+                    <!-- <img src="image/pointage1.PNG" alt=""> -->
+                  </div>
+                    <div class="class row">
+                      <div class="col-md-3 col-12 py-5">
+                        <p class="fw-bold">statistiques des notes du premier semestre</p>
+                      </div>
+                      <div class="col-md-6 col-12  bg-light shadow  bg-body rounded">
+                        <!-- <img src="image/pointage2.PNG" alt=""> -->
+                        <span>Eleve</span>
+                        <canvas  height="200" id="myXhart"></canvas>
+                        <div class="w-100 fw-bolder text-center"><span>MOYENNE</span></div>
+                      </div> 
+                    </div>
+                </div> */
+
+                /* <script type="module">
+                // Import the functions you need from the SDKs you need
+                import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
+                  import {getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-firestore.js";
+              
+                // TODO: Add SDKs for Firebase products that you want to use
+                // https://firebase.google.com/docs/web/setup#available-libraries
+              
+                // Your web app's Firebase configuration
+               const firebaseConfig = {
+                apiKey: "AIzaSyC4OqguXWo2Z8731r5dhhU6WUo4CzxhiB0",
+                authDomain: "finalprojet-25d09.firebaseapp.com",
+                databaseURL: "https://finalprojet-25d09-default-rtdb.firebaseio.com",
+                projectId: "finalprojet-25d09",
+                storageBucket: "finalprojet-25d09.appspot.com",
+                messagingSenderId: "370314418170",
+                appId: "1:370314418170:web:19aa7649c70abb39067643"
+              };
+              
+                // Initialize Firebase
+                const app = initializeApp(firebaseConfig);
+                const db=getFirestore(app)
+              const querySnapshot = await getDocs(collection(db, "bulletin"));
+              let tabmoyenne=[]
+              querySnapshot.forEach((doc) => {
+                // doc.data() is never undefined for query doc snapshots
+                console.log( doc.data());
+                tabmoyenne.push(doc.data())
+              });
+              console.log(tabmoyenne);
+              
+              let moyenne0to10 = tabmoyenne.filter(({ total: { moy } })=> moy >= 0 && moy <= 10)
+              console.log(moyenne0to10);
+              let moyenne10to15 = tabmoyenne.filter(({ total: { moy } }) => moy > 10 && moy <= 15);
+              console.log(moyenne10to15);
+              let moyenne15to20 = tabmoyenne.filter(({total: {moy}}) => moy > 15 && moy <= 20);
+              console.log(moyenne15to20);
+              const ctx = document.getElementById('myXhart');
+              
+              new Chart(ctx, {
+                type: 'bar',
+                data: {
+                  labels: ['Entre 0 et 10', 'Entre 10 et 15', 'Entre 15 et 20'],
+                  datasets: [{
+                  
+                    data: [ moyenne0to10.length, moyenne10to15.length, moyenne15to20.length],
+                    borderWidth: 1,
+                    backgroundColor: '#56CCF2',
+                    borderRadus: [8],
+                  }]
+                },
+                options: {
+                  plugins: {
+                   legend:{
+                    display: false,  
+                   },
+              },
+                
+                }
+              });
+              
+              </script> */

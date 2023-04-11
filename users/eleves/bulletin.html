@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>jeemacoder chalenge</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+       
+         <!--LINK Font Awesone-->
+         <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+         crossorigin="anonymous"
+         referrerpolicy="no-referrer"
+       />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" 
+        integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="moha.css">
+
+        <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+        <link
+          type="text/css"
+          rel="stylesheet"
+          href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css" />
+    </head>
+    <body >  
+
+        <div class="">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white    fixed-top p-4 fall">
+                <div class="container">
+                  <div class="offset-md-3">
+                    <form class="d-flex align-items-center border p-2 border-info rounded-3 ">
+                         <img src="./image/Icon.png" class="icon" alt="ma photo">
+                         <!-- <i class="fa fa-search pt-2 px-3 mx"></i>  -->
+                      <input class="form  border-0 me-2" type="search" placeholder="Recherche" aria-label="Search">
+                    </form>
+                  </div>
+                  <div class="d-none d-sm-block">
+                    <p>Dieynaba Ly</p>
+                </div>
+                <div class="border-0    flechete d-block d-sm-none     d-flex align-items-center justify-content-end">
+                  <a class=" d-flex align-items-center justify-content-center rounded-circle " data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                    <i class="fas fa-bars"></i>
+                  </a>
+                 
+                </div>
+                
+              </nav>
+        </div>
+        <div class="container-fluid ">
+            <div class="row">
+                <div class="col-sm-2 d-sm-block   pt-3 position-relative ">
+                    <div class="d-md-none d-flex flex-column test close  bg-white position-fixed    ">
+
+                      <div class="d-flex mb-2 p-3 justify-content-center">
+                        <a href="" class=" yerry p-2  w-100 text-center   " data-bs-toggle="tooltip"
+                        data-bs-placement="right"
+                        title="Dashboars">
+                        <img src="./image/icon4.png" alt="photo" class="icon5  img-fluid ">
+                        </a>
+                       
+                      </div>
+                      <div class="d-flex mb-2 justify-content-center   ">
+                      
+                       
+                        <div class="accordion  " id="accordionExample">
+                            
+                            <div class="accordion-item bg-transparent   border-0">
+                              <h5 class="accordion-header p-3" id="headingTwi">
+                                <button class=" collapsed border-0 bg-transparent merry px-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwi" aria-expanded="false" aria-controls="collapseTwo">
+                                  <img src="./image/icon0.png" alt="photo" class="icon5 img-fluid w-100  " data-bs-toggle="tooltip"
+                                  data-bs-placement="right"
+                                  title="USERS">
+                                 
+                                </button>
+                              </h5>
+                              <div id="collapseTwi" class="accordion-collapse collapse h-100" aria-labelledby="headingTwi" data-bs-parent="#accordionExample">
+                                <div class="accordion-body d-flex flex-column   p-0">
+                                    <a  class=" yerry px-4 py-2  mb-2 " href="../eleves/bulletin.html">eleve</a>
+                                    <a class=" yerry p-2  mb-2  " href="../professeurs/listeEleve.html">professeur</a>
+                                    <a class=" yerry p-2   " href="../personnelles/index.html">personnels</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+
+                      </div>
+                      <div class="d-flex mb-2 justify-content-center">
+                        <a href="" class="  yerry p-3 w-100 text-center  " data-bs-toggle="tooltip"
+                        data-bs-placement="right"
+                        title="comptablité">
+                          <img src="./image/icon1.png" alt="photo" class="icon5   img-fluid ">
+                          
+                      </a>
+                      </div>
+                      <div class="d-flex mb-2 justify-content-center ">
+                        <a href="../../statistiques/index.html" class=" text-center yerry  p-3 w-100" data-bs-toggle="tooltip"
+                        data-bs-placement="right"
+                        title="statistiques">
+                          <img src="./image/icon2.png" alt="photo" class="icon5 img-fluid ">
+                          
+                        </a>
+                      </div>
+                      <div class="d-flex  justify-content-center p-3 ">
+                        <a href="../../pointage/pointage.html" class=" text-center  yerry  p-2 w-100 " data-bs-toggle="tooltip"
+                        data-bs-placement="right"
+                        title="Pointage">
+                          <img src="./image/icon3.png" alt="photo" class="icon5 img-fluid ">
+                          
+                        </a>
+                      </div>
+                     
+                         
+                         
+                          
+                          <div class="offcanvas offcanvas-start CHANGED" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                            <div class="offcanvas-header">
+                              <h5 class="offcanvas-title" id="offcanvasExampleLabel">MENU</h5>
+                              <button type="button" class=" border-0 bg-transparent rounded-circle flechete text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+                                <i class="fas fa-arrow-left"></i>
+                              </button>
+                            </div>
+                            <div class="offcanvas-body">
+                              <div class="col-12 mina ps-4">
+                                <div class="dash d-flex mb-3 ">
+                                  <a href="/dashbord/dashbord.html" class="d-flex align-items-center baba p-2 w-100  ">
+                                    <img src="./image/icon4.png" alt="photo" class="icon4 img-fluid ">
+                                    <p class=" ms-4 mb-0">Dashboars</p>
+                                  </a>
+                                </div>
+                                <div class=" d-flex mb-3 ">
+                                
+                                    
+                                    <div class="accordion p-2 w-100 " id="accordionExample">
+                                        
+                                        <div class="accordion-item bg-transparent   border-0">
+                                          <h5 class="accordion-header  " id="headingTwa">
+                                            <button class=" collapsed border-0 bg-transparent w-100 d-flex px-0  justify-content-between align-items-center " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwa" aria-expanded="false" aria-controls="collapseTwa">
+                                              <img src="./image/icon0.png" alt="photo" class="icon4 img-fluid ">
+                                              <p class="mb-0 nam ">Users</p>
+                                              <img src="./image/icon6.png" class="img-fluid " alt="">
+                                            </button>
+                                          </h5>
+                                          <div id="collapseTwa" class="accordion-collapse collapse  " aria-labelledby="headingTwa" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body  d-flex flex-column px-0">
+                                                <a class="baba  mb-3" href="./bulletin.html">eleve</a>
+                                                <a class="baba mb-3" href="../professeurs/listeEleve.html">professeur</a>
+                                                <a class="baba" href="../personnelles/index.html">personnels</a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                             
+                                    <div class=" d-flex    mb-3 ">
+                                        <a href="/comptabilité/index.html" class="d-flex align-items-center baba p-2 w-100  ">
+                                            <img src="./image/icon1.png" alt="photo" class="icon4  img-fluid ">
+                                            <p class="ms-4 mb-0 ">Comptabilite</p>
+                                        </a>
+                                    </div>
+                               
+                                <div class=" d-flex mb-3  ">
+                                  <a href="../../statistiques/index.html" class="d-flex align-items-center p-2 w-100 baba   ">
+                                    <img src="./image/icon2.png" alt="photo" class="icon4 img-fluid ">
+                                    <p class="ms-4 mb-0">Statistique</p>
+                                  </a>
+                                </div>
+                                <div class=" d-flex  ">
+                                  <a href="../../pointage/pointage.html" class="d-flex align-items-center p-2 w-100 baba  ">
+                                    <img src="./image/icon3.png" alt="photo" class="icon4 img-fluid ">
+                                    <p class="ms-4 mb-0">Pointage</p>
+                                  </a>
+                                </div>
+
+     
+ 
+                                
+                                
+                               
+                            </div>
+                             
+                            </div>
+                          </div>
+                    </div>
+                    
+                    <div class="container d-none d-md-block px-2 pt-5 py-3 bg-white position-fixed site">
+                        <div class="row mx-auto">
+                                
+                                
+                                
+                               
+                              
+                                
+                            <div class="col-12 mina ">
+                                <div class="dash d-flex  mb-3 ">
+                                  <a href="/dashbord/dashbord.html" class="d-flex align-items-center baba p-2 w-100  ">
+                                    <img src="./image/icon4.png" alt="photo" class="icon4 img-fluid ">
+                                    <p class=" ms-4 mb-0">Dashboars</p>
+                                  </a>
+                                </div>
+                                <div class=" d-flex mb-3 ">
+                                
+                                    
+                                    <div class="accordion p-2 w-100 " id="accordionExample">
+                                        
+                                        <div class="accordion-item bg-transparent   border-0">
+                                          <h5 class="accordion-header  p-1 w-100 " id="headingTwo">
+                                            <button class=" collapsed border-0 bg-transparent w-100 d-flex px-0   justify-content align-items-center " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                              <img src="./image/icon0.png" alt="photo" class="icon4 img-fluid ">
+                                              <p class="mb-0 nam ms-4  me-5">Users</p>
+                                              <img src="./image/icon6.png" class="img-fluid " alt="">
+                                            </button>
+                                          </h5>
+                                          <div id="collapseTwo" class="accordion-collapse collapse  " aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body  d-flex flex-column px-0">
+                                                <a class="baba  mb-3" href="./bulletin.html">eleve</a>
+                                                <a class="baba mb-3" href="../professeurs/listeEleve.html">professeur</a>
+                                                <a class="baba" href="../personnelles/index.html">personnels</a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                             
+                                    <div class=" d-flex    mb-3 ">
+                                        <a href="/comptabilité/index.html" class="d-flex align-items-center baba p-2 w-100  ">
+                                            <img src="./image/icon1.png" alt="photo" class="icon4  img-fluid ">
+                                            <p class="ms-4 mb-0 ">Comptabilite</p>
+                                        </a>
+                                    </div>
+                               
+                                <div class=" d-flex mb-3  ">
+                                  <a href="../../statistiques/index.html" class="d-flex align-items-center p-2 w-100 baba   ">
+                                    <img src="./image/icon2.png" alt="photo" class="icon4 img-fluid ">
+                                    <p class="ms-4 mb-0">Statistique</p>
+                                  </a>
+                                </div>
+                                <div class=" d-flex  ">
+                                  <a href="../../pointage/pointage.html" class="d-flex align-items-center p-2 w-100 baba  ">
+                                    <img src="./image/icon3.png" alt="photo" class="icon4 img-fluid ">
+                                    <p class="ms-4 mb-0">Pointage</p>
+                                  </a>
+                                </div>
+
+     
+ 
+                                
+                                
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- c'est dans cette colonne que vous allez mettre votre contenu ou tableau et svp non touche au javascripte -->
+                     <!-- Enlevez juste le lorem ipsum et mettez y les travaux effectués s'il ya un probleme suis disponible -->
+
+
+
+                <div class="col-sm-9 offset-sm-1 selection py-5  ">
+
+                  <div class="container mb-5">
+                    <div class="row d-flex justify-content-evenly">
+                      <div class="col-md-6 col-sm-12 col-lg-4 colonne">
+                        <div class=" border-0 mama shadow p-5">
+                          <a  href="./moha.html" class="d-flex justify-content-center flex-column  align-items-center w-100 h-100">
+                            <img src="./image/images (1) 1.png" class="w-100 h-100" alt="cours">
+                             <h6 class="text-center mt-5">COURS</h6>
+                          </a>
+                        </a>
+                      </div>  
+                      </div>    
+                      <div class="col-md-6 col-sm-12 col-lg-4 colonne">
+                        <div class="border-0 mama shadow p-5">
+                             <a  href="./bulletin.html" class="d-flex justify-content-center flex-column  align-items-center w-100 h-100">
+                                <img src="./image/undraw_Documents_re_isxv 1.png" class="w-100 h-100" alt="bulletin">
+                                 <h6 class="text-center mt-5">BULLETINS</h6>
+                              </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="formulaire">
+                    <div class="modal fade" id="exampleModalToggle1" aria-hidden="true" aria-labelledby="exampleModalToggleLabel1" tabindex="-1" data-bs-backdrop="static">
+                      <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header maCouleur">
+                            <h1 class="modal-title text-white fs-5" id="exampleModalToggleLabel1">Mathematiques</h1>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <form action="" id="matTform" autocomplete="off" onsubmit="return false">
+                              <div class="form-group row mb-3">    
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Matiere</label> <br>
+                                      <select class="form-select shadow p-2 w-100 rounded-2 border-2 border-dark" id="matmatiere" aria-label="Floating label select example">
+                                          <option selected>Maths</option>
+                                      </select>
+                                  </div>
+                  
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Devoir</label> <br>
+                                      <input class="rounded-2 shadow p-2 w-100" type="number" id="matdevoir"/>
+                                  </div>                  
+                              </div>
+                              
+                              <div class="form-group row mb-3">                      
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Compo</label> <br>
+                                      <input class="rounded-2 shadow p-2 w-100" type="number" id="matcompo"/>
+                                  </div> 
+                  
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Coef</label> <br>
+                                      <input class="rounded-2 shadow p-2 w-100" type="number" id="matcoef"/>
+                                  </div> 
+                              </div>
+            
+                              <div class="form-group row mb-3">        
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Rang</label> <br>
+                                      <input class="rounded-2 shadow p-2 w-100" type="number" id="matrang"/>
+                                  </div>  
+                                  
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Appreciation</label> <br>
+                                      <input class="rounded-2 shadow p-2 w-100" type="text" id="matappreciation"/>
+                                  </div> 
+                              </div> 
+                              <div class="float-end mt-3">
+                                <button class="btn maCouleur text-white fw-bold" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Suivant</button>
+                              </div>                                   
+                          </form>  
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1" data-bs-backdrop="static">
+                      <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header maCouleur">
+                            <h1 class="modal-title text-white fs-5" id="exampleModalToggleLabel2">Anglais</h1>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <form action="" id="angTform" autocomplete="off" onsubmit="return false">
+                              <div class="form-group row mb-3">    
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Matiere</label> <br>
+                                      <select class="form-select shadow p-2 w-100 rounded-2 border-2 border-dark" id="angmatiere" aria-label="Floating label select example">
+                                          <option selected>Anglais</option>
+                                      </select>
+                                  </div>
+                  
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Devoir</label> <br>
+                                      <input class="rounded-2 shadow p-2 w-100" type="number" id="angdevoir"/>
+                                  </div>                  
+                              </div>
+                              
+                              <div class="form-group row mb-3">                      
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Compo</label> <br>
+                                      <input class="rounded-2 shadow p-2 w-100" type="number" id="angcompo"/>
+                                  </div> 
+                  
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Coef</label> <br>
+                                      <input class="rounded-2 shadow p-2 w-100" type="number" id="angcoef"/>
+                                  </div> 
+                              </div>
+            
+                              <div class="form-group row mb-3">        
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Rang</label> <br>
+                                      <input class="rounded-2 shadow p-2 w-100" type="number" id="angrang"/>
+                                  </div>  
+                                  
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Appreciation</label> <br>
+                                      <input class="rounded-2 shadow p-2 w-100" type="text" id="angappreciation"/>
+                                  </div> 
+                              </div>                   
+                              <div class="float-end mt-3">
+                                <button class="btn maCouleur text-white fw-bold" data-bs-target="#exampleModalToggle1" data-bs-toggle="modal">Precedent</button>
+                                <button class="btn maCouleur text-white fw-bold" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal">Suivant</button> 
+                              </div>      
+                          </form>  
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+            
+                    <div class="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel3" tabindex="-1" data-bs-backdrop="static">
+                      <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header maCouleur">
+                            <h1 class="modal-title text-white fs-5" id="exampleModalToggleLabel3">Histoire-Geographie</h1>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <form action="" id="hgTform" autocomplete="off" onsubmit="return false">
+                              <div class="form-group row mb-3">    
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Matiere</label> <br>
+                                      <select class="form-select shadow p-2 w-100 rounded-2 border-2 border-dark" id="hgmatiere" aria-label="Floating label select example">
+                                          <option selected>HG</option>
+                                      </select>
+                                  </div>
+                  
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Devoir</label> <br>
+                                      <input class="rounded-2 shadow p-2 w-100" type="number" id="hgdevoir"/>
+                                  </div>                  
+                              </div>
+                              
+                              <div class="form-group row mb-3">                      
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Compo</label> <br>
+                                      <input class="rounded-2 shadow p-2 w-100" type="number" id="hgcompo"/>
+                                  </div> 
+                  
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Coef</label> <br>
+                                      <input class="rounded-2 shadow p-2 w-100" type="number" id="hgcoef"/>
+                                  </div> 
+                              </div>
+            
+                              <div class="form-group row mb-3">        
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Rang</label> <br>
+                                      <input class="rounded-2 shadow p-2 w-100" type="number" id="hgrang"/>
+                                  </div>  
+                                  
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Appreciation</label> <br>
+                                      <input class="rounded-2 shadow p-2 w-100" type="text" id="hgappreciation"/>
+                                  </div> 
+                              </div> 
+                              <div class="float-end mt-3">
+                                <button class="btn maCouleur text-white fw-bold" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Precedent</button>
+                                <button class="btn maCouleur text-white fw-bold" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal">Suivant</button>
+                              </div>                                                            
+                          </form>  
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+            
+                    <div class="modal fade" id="exampleModalToggle4" aria-hidden="true" aria-labelledby="exampleModalToggleLabel4" tabindex="-1" data-bs-backdrop="static">
+                      <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header maCouleur">
+                            <h1 class="modal-title text-white fs-5" id="exampleModalToggleLabel4">SVT</h1>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <form action="" id="svtTform" autocomplete="off" onsubmit="return false">
+                              <div class="form-group row mb-3">    
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Matiere</label> <br>
+                                      <select class="form-select shadow p-2 w-100 rounded-2 border-2 border-dark" id="svtmatiere" aria-label="Floating label select example">
+                                          <option selected>SVT</option>
+                                      </select>
+                                  </div>
+                  
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Devoir</label> <br>
+                                      <input class="rounded-2 shadow p-2 w-100" type="number" id="svtdevoir"/>
+                                  </div>                  
+                              </div>
+                              
+                              <div class="form-group row mb-3">                      
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Compo</label> <br>
+                                      <input class="rounded-2 shadow p-2 w-100" type="number" id="svtcompo"/>
+                                  </div> 
+                  
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Coef</label> <br>
+                                      <input class="rounded-2 shadow p-2 w-100" type="number" id="svtcoef"/>
+                                  </div> 
+                              </div>
+            
+                              <div class="form-group row mb-3">        
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Rang</label> <br>
+                                      <input class="rounded-2 shadow p-2 w-100" type="number" id="svtrang"/>
+                                  </div>  
+                                  
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Appreciation</label> <br>
+                                      <input class="rounded-2 shadow p-2 w-100" type="text" id="svtappreciation"/>
+                                  </div> 
+                              </div>  
+                              <div class="float-end mt-3">
+                                <button class="btn maCouleur text-white fw-bold" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal">Precedent</button>
+                                <button class="btn maCouleur text-white fw-bold" data-bs-target="#exampleModalToggle5" data-bs-toggle="modal">Suivant</button>
+                              </div> 
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+            
+                    <div class="modal fade" id="exampleModalToggle5" aria-hidden="true" aria-labelledby="exampleModalToggleLabel5" tabindex="-1" data-bs-backdrop="static">
+                      <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header maCouleur">
+                            <h1 class="modal-title text-white fs-5" id="exampleModalToggleLabel5">Physique-Chimie</h1>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <form action="" id="pcTform" autocomplete="off" onsubmit="return false">
+                              <div class="form-group row mb-3">    
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Matiere</label> <br>
+                                      <select class="form-select shadow p-2 w-100 rounded-2 border-2 border-dark" id="pcmatiere" aria-label="Floating label select example">
+                                          <option selected>PC</option>
+                                      </select>
+                                  </div>
+                  
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Devoir</label> <br>
+                                      <input class="rounded-2 shadow p-2 w-100" type="number" id="pcdevoir"/>
+                                  </div>                  
+                              </div>
+                              
+                              <div class="form-group row mb-3">                      
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Compo</label> <br>
+                                      <input class="rounded-2 shadow p-2 w-100" type="number" id="pccompo"/>
+                                  </div> 
+                  
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Coef</label> <br>
+                                      <input class="rounded-2 shadow p-2 w-100" type="number" id="pccoef"/>
+                                  </div> 
+                              </div>
+            
+                              <div class="form-group row mb-3">        
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Rang</label> <br>
+                                      <input class="rounded-2 shadow p-2 w-100" type="number" id="pcrang"/>
+                                  </div>  
+                                  
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Appreciation</label> <br>
+                                      <input class="rounded-2 shadow p-2 w-100" type="text" id="pcappreciation"/>
+                                  </div> 
+                              </div>
+                              <div class="float-end mt-3">
+                                <button class="btn maCouleur text-white fw-bold" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal">Precedent</button>
+                                <button class="btn maCouleur text-white fw-bold" data-bs-target="#exampleModalToggle6" data-bs-toggle="modal">Suivant</button>
+                              </div>                                                      
+                          </form>  
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+            
+                    <div class="modal fade" id="exampleModalToggle6" aria-hidden="true" aria-labelledby="exampleModalToggleLabel6" tabindex="-1" data-bs-backdrop="static">
+                      <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header maCouleur">
+                            <h1 class="modal-title text-white fs-5" id="exampleModalToggleLabel6">EPS</h1>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <form action="" id="epsTform" autocomplete="off" onsubmit="return false">
+                              <div class="form-group row mb-3">    
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Matiere</label> <br>
+                                      <select class="form-select shadow p-2 w-100 rounded-2 border-2 border-dark" id="epsmatiere" aria-label="Floating label select example">
+                                          <option selected>EPS</option>
+                                      </select>
+                                  </div>
+                  
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Devoir</label> <br>
+                                      <input class="rounded-2 shadow p-2 w-100" type="number" id="epsdevoir"/>
+                                  </div>                  
+                              </div>
+                              
+                              <div class="form-group row mb-3">                      
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Compo</label> <br>
+                                      <input class="rounded-2 shadow p-2 w-100" type="number" id="epscompo"/>
+                                  </div> 
+                  
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Coef</label> <br>
+                                      <input class="rounded-2 shadow p-2 w-100" type="number" id="epscoef"/>
+                                  </div> 
+                              </div>
+            
+                              <div class="form-group row mb-3">        
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Rang</label> <br>
+                                      <input class="rounded-2 shadow p-2 w-100" type="number" id="epsrang"/>
+                                  </div>  
+                                  
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Appreciation</label> <br>
+                                      <input class="rounded-2 shadow p-2 w-100" type="text" id="epsappreciation"/>
+                                  </div> 
+                              </div>  
+                              <div class="float-end mt-3">
+                                <button class="btn maCouleur text-white fw-bold" data-bs-target="#exampleModalToggle5" data-bs-toggle="modal">Precedent</button>
+                                <button class="btn maCouleur text-white fw-bold" data-bs-target="#exampleModalToggle7" data-bs-toggle="modal">Suivant</button>
+                              </div>                                                    
+                         </form>  
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+            
+                    <div class="modal fade" id="exampleModalToggle7" aria-hidden="true" aria-labelledby="exampleModalToggleLabel7" tabindex="-1" data-bs-backdrop="static">
+                      <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header maCouleur">
+                            <h1 class="modal-title text-white fs-5" id="exampleModalToggleLabel7">Francais</h1>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <form action="" id="frTform" autocomplete="off" onsubmit="return false">
+                              <div class="form-group row mb-3">    
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Matiere</label> <br>
+                                      <select class="form-select shadow p-2 w-100 rounded-2 border-2 border-dark" id="frmatiere" aria-label="Floating label select example">
+                                         <option selected>Francais</option>
+                                      </select>
+                                  </div>
+                  
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Devoir</label> <br>
+                                      <input class="rounded-2 shadow p-2 w-100" type="number" id="frdevoir"/>
+                                  </div>                  
+                              </div>
+                              
+                              <div class="form-group row mb-3">                      
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Compo</label> <br>
+                                      <input class="rounded-2 shadow p-2 w-100" type="number" id="frcompo"/>
+                                  </div> 
+                  
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Coef</label> <br>
+                                      <input class="rounded-2 shadow p-2 w-100" type="number" id="frcoef"/>
+                                  </div> 
+                              </div>
+            
+                              <div class="form-group row mb-3">        
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Rang</label> <br>
+                                      <input class="rounded-2 shadow p-2 w-100" type="number" id="frrang"/>
+                                  </div>  
+                                  
+                                  <div class="col-md-6">
+                                      <label class="fw-bold">Appreciation</label> <br>
+                                      <input class="rounded-2 shadow p-2 w-100" type="text" id="frappreciation"/>
+                                  </div> 
+                              </div>
+                              <div class="float-end mt-3">
+                                <button class="btn maCouleur text-white fw-bold" data-bs-target="#exampleModalToggle6" data-bs-toggle="modal">Precedent</button>
+                                <button class="btn text-white border-0 fw-bold shadow maCouleur" id="ajouter">Enregistrer</button>
+                              </div>                                             
+                          </form>  
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+ 
+                <!-- <a class="btn maCouleur text-white fw-bold" data-bs-toggle="modal" href="#exampleModalToggle1" role="button">Ajouter un bulletin</a> -->
+               
+          
+              <main>
+                  <div class="container">
+                      <div class="en-tete p-5">
+                          <div class="row">
+                              <div class="col-12 col-lg-10 col-md-8 col-sm-12">
+                                  <p class="text-secondary">
+                                      IA de Dakar  <br>
+                                      IEF de Dakar Plateau <br>
+                                      CEM Martin Luther King
+                                  </p>
+                              </div>
+          
+                              <div class="col-12 col-lg-2 col-md-4 col-sm-12">
+                                  <p class="text-secondary">
+                                      Annee Scolaire: 2022 / 2023  <br>
+                                      1ere semestre
+                                  </p>
+                              </div>
+                          </div>
+          
+                          <h4 class="text-center p-2 mt-5 mb-5 border border-3 border-start-0  border-end-0">BULLETIN DE NOTES</h4>
+          
+                          <div class="row">
+                              <div class="col-12 col-lg-10 col-md-8 col-sm-12">
+                                  <p class="text-secondary" id="infos">
+                                     <span id = "nom"></span>  <br>
+                                     <span id ="prenom"></span> <br>
+                                     <span id ="date"></span> 
+                                  </p>
+                              </div>
+          
+                          
+                            
+          
+                              <div class="col-12 col-lg-2 col-md-4 col-sm-12 text-secondary">
+                                  <p>
+                                    <span>Classe: 3eme B</span>  <br>
+                                    <span>Nombre d'eleves: 30</span> <br>
+                                    <span>Classe redoublees: 0</span> <br>
+                                  </p>
+                              </div>
+                          </div>            
+                      </div>
+          
+                      <div class="corp ms-5 table-responsive">
+                          <table class="table table-borderless text-secondary" id="tableBulletin">
+                              <thead>
+                                <tr>
+                                  <th scope="col">MATIERES</th>
+                                  <th scope="col">DEVOIRS</th>
+                                  <th scope="col">COMPO</th>
+                                  <th scope="col">MOY/20</th>
+                                  <th scope="col">COEF</th>
+                                  <th scope="col">MOYX</th>
+                                  <th scope="col">RANG</th>
+                                  <th scope="col">APPRECIATIONS</th>
+                                </tr>
+                              </thead>
+                              <tbody id="tBody"></tbody>
+                            </table>
+                      </div>
+              
+                  </div>
+              </main>
+          
+    
+                 
+                </div>
+                   
+    
+       
+
+
+        <!-- Optional JavaScript -->
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+             <!--KIT.FONT AWESOME-->
+    <script
+    src="https://kit.fontawesome.com/e5c1f80f7e.js"
+    crossorigin="anonymous"
+  ></script>
+         <script>
+          var tooltipTriggerList = [].slice.call(
+            document.querySelectorAll('[data-bs-toggle="tooltip"]')
+          );
+          var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+          });
+        </script>
+        <!-- <script src="./js_gestion.js"></script> -->
+        <script src="./js_gestion.js" type="module"></script>
+
+    </body>
+</html> 

@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>jeemacoder chalenge</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+       
+         <!--LINK Font Awesone-->
+         <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+         crossorigin="anonymous"
+         referrerpolicy="no-referrer"
+       />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" 
+        integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <link rel="stylesheet" href="./pointage.css">
+    </head>
+    <body >  
+
+        <div class="">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white    fixed-top p-4 fall">
+                <div class="container">
+                  <div class="offset-md-3">
+                    <form class="d-flex align-items-center border p-2 border-info rounded-3 ">
+                         <img src="./image/Icon.png" class="icon" alt="ma photo">
+                         <!-- <i class="fa fa-search pt-2 px-3 mx"></i>  -->
+                      <input class="form  border-0 me-2" type="search" placeholder="Recherche" aria-label="Search">
+                    </form>
+                  </div>
+                  <div class="d-none d-sm-block">
+                    <p>Dieynaba Ly</p>
+                </div>
+                <div class="border-0    flechete d-block d-sm-none     d-flex align-items-center justify-content-end">
+                  <a class=" d-flex align-items-center justify-content-center rounded-circle " data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                    <i class="fas fa-bars"></i>
+                  </a>
+                 
+                </div>
+                
+              </nav>
+        </div>
+        <div class="container-fluid ">
+            <div class="row">
+                <div class="col-sm-2 d-sm-block   pt-3 position-relative ">
+                    <div class="d-md-none d-flex flex-column test close  bg-white position-fixed    ">
+
+                      <div class="d-flex mb-2 p-3 justify-content-center">
+                        <a href="../dashbord/dashbord.html" class=" yerry p-2  w-100 text-center   " data-bs-toggle="tooltip"
+                        data-bs-placement="right"
+                        title="Dashboars">
+                        <img src="./image/icon4.png" alt="photo" class="icon5  img-fluid ">
+                        </a>
+                       
+                      </div>
+                      <div class="d-flex mb-2 justify-content-center   ">
+                      
+                       
+                        <div class="accordion  " id="accordionExample">
+                            
+                            <div class="accordion-item bg-transparent   border-0">
+                              <h5 class="accordion-header p-3" id="headingTwi">
+                                <button class=" collapsed border-0 bg-transparent merry px-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwi" aria-expanded="false" aria-controls="collapseTwo">
+                                  <img src="./image/icon0.png" alt="photo" class="icon5 img-fluid w-100  " data-bs-toggle="tooltip"
+                                  data-bs-placement="right"
+                                  title="USERS">
+                                 
+                                </button>
+                              </h5>
+                              <div id="collapseTwi" class="accordion-collapse collapse h-100" aria-labelledby="headingTwi" data-bs-parent="#accordionExample">
+                                <div class="accordion-body d-flex flex-column   p-0">
+                                    <a  class=" yerry px-4 py-2  mb-2 " href="../users/eleves/bulletin.html">eleve</a>
+                                    <a class=" yerry p-2  mb-2  " href="../users/professeurs/listeEleve.html">professeur</a>
+                                    <a class=" yerry p-2   " href="../users/personnelles/index.html">personnels</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+
+                      </div>
+                      <div class="d-flex mb-2 justify-content-center">
+                        <a href="../comptabilité/index.html" class="  yerry p-3 w-100 text-center  " data-bs-toggle="tooltip"
+                        data-bs-placement="right"
+                        title="comptablité">
+                          <img src="./image/icon1.png" alt="photo" class="icon5   img-fluid ">
+                          
+                      </a>
+                      </div>
+                      <div class="d-flex mb-2 justify-content-center ">
+                        <a href="../statistiques/index.html" class=" text-center yerry  p-3 w-100" data-bs-toggle="tooltip"
+                        data-bs-placement="right"
+                        title="statistiques">
+                          <img src="./image/icon2.png" alt="photo" class="icon5 img-fluid ">
+                          
+                        </a>
+                      </div>
+                      <div class="d-flex  justify-content-center p-3 ">
+                        <a href="" class=" text-center  yerry  p-2 w-100 " data-bs-toggle="tooltip"
+                        data-bs-placement="right"
+                        title="Pointage">
+                          <img src="./image/icon3.png" alt="photo" class="icon5 img-fluid ">
+                          
+                        </a>
+                      </div>
+                     
+                         
+                         
+                          
+                          <div class="offcanvas offcanvas-start CHANGED" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                            <div class="offcanvas-header">
+                              <h5 class="offcanvas-title" id="offcanvasExampleLabel">MENU</h5>
+                              <button type="button" class=" border-0 bg-transparent rounded-circle flechete text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+                                <i class="fas fa-arrow-left"></i>
+                              </button>
+                            </div>
+                            <div class="offcanvas-body">
+                              <div class="col-12 mina ps-4">
+                                <div class="dash d-flex mb-3 ">
+                                  <a href="../dashbord/dashbord.html" class="d-flex align-items-center baba p-2 w-100  ">
+                                    <img src="./image/icon4.png" alt="photo" class="icon4 img-fluid ">
+                                    <p class=" ms-4 mb-0">Dashboars</p>
+                                  </a>
+                                </div>
+                                <div class=" d-flex mb-3 ">
+                                
+                                    
+                                    <div class="accordion p-2 w-100 " id="accordionExample">
+                                        
+                                        <div class="accordion-item bg-transparent   border-0">
+                                          <h5 class="accordion-header  " id="headingTwa">
+                                            <button class=" collapsed border-0 bg-transparent w-100 d-flex px-0  justify-content-between align-items-center " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwa" aria-expanded="false" aria-controls="collapseTwa">
+                                              <img src="./image/icon0.png" alt="photo" class="icon4 img-fluid ">
+                                              <p class="mb-0 nam ">Users</p>
+                                              <img src="./image/icon6.png" class="img-fluid " alt="">
+                                            </button>
+                                          </h5>
+                                          <div id="collapseTwa" class="accordion-collapse collapse  " aria-labelledby="headingTwa" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body  d-flex flex-column px-0">
+                                                <a class="baba  mb-3" href="../users/eleves/bulletin.html">eleve</a>
+                                                <a class="baba mb-3" href="../users/professeurs/listeEleve.html">professeur</a>
+                                                <a class="baba" href="../users/personnelles/index.html">personnels</a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                             
+                                    <div class=" d-flex    mb-3 ">
+                                        <a href="../comptabilité/index.html" class="d-flex align-items-center baba p-2 w-100  ">
+                                            <img src="./image/icon1.png" alt="photo" class="icon4  img-fluid ">
+                                            <p class="ms-4 mb-0 ">Comptabilite</p>
+                                        </a>
+                                    </div>
+                               
+                                <div class=" d-flex mb-3  ">
+                                  <a href="../statistiques/index.html" class="d-flex align-items-center p-2 w-100 baba   ">
+                                    <img src="./image/icon2.png" alt="photo" class="icon4 img-fluid ">
+                                    <p class="ms-4 mb-0">Statistique</p>
+                                  </a>
+                                </div>
+                                <div class=" d-flex  ">
+                                  <a href="./pointage.html" class="d-flex align-items-center p-2 w-100 baba  ">
+                                    <img src="./image/icon3.png" alt="photo" class="icon4 img-fluid ">
+                                    <p class="ms-4 mb-0">Pointage</p>
+                                  </a>
+                                </div>
+
+     
+ 
+                                
+                                
+                               
+                            </div>
+                             
+                            </div>
+                          </div>
+                    </div>
+                    
+                    <div class="container d-none d-md-block px-2 pt-5 py-3 bg-white position-fixed site">
+                        <div class="row mx-auto">
+                                
+                                
+                                
+                               
+                              
+                                
+                            <div class="col-12 mina ">
+                                <div class="dash d-flex  mb-3 ">
+                                  <a href="../dashbord/dashbord.html" class="d-flex align-items-center baba p-2 w-100  ">
+                                    <img src="./image/icon4.png" alt="photo" class="icon4 img-fluid ">
+                                    <p class=" ms-4 mb-0">Dashboars</p>
+                                  </a>
+                                </div>
+                                <div class=" d-flex mb-3 ">
+                                
+                                    
+                                    <div class="accordion p-2 w-100 " id="accordionExample">
+                                        
+                                        <div class="accordion-item bg-transparent   border-0">
+                                          <h5 class="accordion-header  p-1 w-100 " id="headingTwo">
+                                            <button class=" collapsed border-0 bg-transparent w-100 d-flex px-0   justify-content align-items-center " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                              <img src="./image/icon0.png" alt="photo" class="icon4 img-fluid ">
+                                              <p class="mb-0 nam ms-4  me-5">Users</p>
+                                              <img src="./image/icon6.png" class="img-fluid " alt="">
+                                            </button>
+                                          </h5>
+                                          <div id="collapseTwo" class="accordion-collapse collapse  " aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body  d-flex flex-column px-0">
+                                                <a class="baba  mb-3" href="../users/eleves/bulletin.html">eleve</a>
+                                                <a class="baba mb-3" href="../users/professeurs/listeEleve.html">professeur</a>
+                                                <a class="baba" href="../users/personnelles/index.html">personnels</a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                             
+                                    <div class=" d-flex    mb-3 ">
+                                        <a href="../comptabilité/index.html" class="d-flex align-items-center baba p-2 w-100  ">
+                                            <img src="./image/icon1.png" alt="photo" class="icon4  img-fluid ">
+                                            <p class="ms-4 mb-0 ">Comptabilite</p>
+                                        </a>
+                                    </div>
+                               
+                                <div class=" d-flex mb-3  ">
+                                  <a href="../statistiques/index.html" class="d-flex align-items-center p-2 w-100 baba   ">
+                                    <img src="./image/icon2.png" alt="photo" class="icon4 img-fluid ">
+                                    <p class="ms-4 mb-0">Statistique</p>
+                                  </a>
+                                </div>
+                                <div class=" d-flex  ">
+                                  <a href="./pointage.html" class="d-flex align-items-center p-2 w-100 baba  ">
+                                    <img src="./image/icon3.png" alt="photo" class="icon4 img-fluid ">
+                                    <p class="ms-4 mb-0">Pointage</p>
+                                  </a>
+                                </div>
+
+     
+ 
+                                
+                                
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- c'est dans cette colonne que vous allez mettre votre contenu ou tableau et svp non touche au javascripte -->
+                     <!-- Enlevez juste le lorem ipsum et mettez y les travaux effectués s'il ya un probleme suis disponible -->
+
+
+
+                <div class="col-sm-9 offset-sm-1 selection py-5  ">
+
+
+                  <div class="container-fluid point mt-5">
+                    <h3 class="mb-5 text-center title text-secondary fw-bold">POINTAGE</h3>
+                    <form
+                      class="register-form shadow p-5 rounded-3"
+                      onsubmit="return false"
+                    >
+                      <div class="row">
+                        <div class="col-12">
+                          <label class="mb-2 text-secondary fw-bold" for="tel"
+                            >Telephone</label
+                          >
+                          <br />
+                          <input
+                            id="tel"
+                            class="form-control float-end rounded-2 border border-secondary shadow p-2 w-100"
+                            type="text"
+                            maxlength="9"
+                          />
+                        </div>
+                      </div>
+                      <div class="row mt-5">
+                        <div class="col-md-12">
+                          <input
+                            class="rounded-2 border-0 shadow p-2 fw-bold bg-info text-white w-100"
+                            type="submit"
+                            id="enregistrer"
+                            value="ENREGISTRER"
+                          />
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+            
+                  <div class="filtre container mt-5">
+                    <div class="row">
+                      <div class="col-md-3 col-lg-3 col-sm-12 text-md-start text-end">
+                        <div class="form-group">
+                          <label for="input-date">Date:</label>
+                          <input type="date" class="form-control" id="input-date" />
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-lg-6 col-sm-12 text-center">
+                        <h6 class="mb-5">LISTE DES PRESENTS</h6>
+                      </div>
+                      <div class="col-md-3 col-lg-3 col-sm-12">
+                        <input
+                          class="form-control rounded-2 search border border-secondary shadow p-2 mb-5"
+                          type="search"
+                          placeholder="Nom"
+                          aria-label="Search"
+                          id="nomInput"
+                        />
+                      </div>
+                    </div>
+                  </div>
+            
+                  <div class="container table-responsive">
+                    <table class="table table-striped table-hover text-center">
+                      <thead>
+                        <tr>
+                          <th scope="col">prenom</th>
+                          <th scope="col">Nom</th>
+                          <th scope="col">Arrivee</th>
+                          <th scope="col">Depart</th>
+                          <th scope="col">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody id="tBody"></tbody>
+                    </table>
+                  </div>
+                   </div>
+    
+       
+    
+
+
+
+
+
+
+        <!-- Optional JavaScript -->
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+       
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+             <!--KIT.FONT AWESOME-->
+    <script
+    src="https://kit.fontawesome.com/e5c1f80f7e.js"
+    crossorigin="anonymous"
+  ></script>
+         <script>
+          var tooltipTriggerList = [].slice.call(
+            document.querySelectorAll('[data-bs-toggle="tooltip"]')
+          );
+          var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+          });
+        </script>
+ 
+ <script
+ src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+ integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+ crossorigin="anonymous"
+></script>
+
+<script
+ src="https://kit.fontawesome.com/712d58e84c.js"
+ crossorigin="anonymous"
+></script>
+<script type="module">
+ // Import the functions you need from the SDKs you need
+ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+ import {
+   getFirestore,
+   setDoc,
+   addDoc,
+   doc,
+   updateDoc,
+   deleteDoc,
+   getDoc,
+   query,
+   collection,
+   where,
+   getDocs,
+   onSnapshot,
+ } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-firestore.js";
+ // TODO: Add SDKs for Firebase products that you want to use
+ // https://firebase.google.com/docs/web/setup#available-libraries
+ 
+ // Your web app's Firebase configuration
+ 
+ const firebaseConfig = {
+    apiKey: "AIzaSyDn6PYE_7HYD1pATm1S6DBDjsYMigiBQ00",
+    authDomain: "pointage-1c893.firebaseapp.com",
+    projectId: "pointage-1c893",
+    storageBucket: "pointage-1c893.appspot.com",
+    messagingSenderId: "551841692809",
+    appId: "1:551841692809:web:026a70f6b5880338785a58"
+  };
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+      // Initialize Cloud Firestore and get a reference to the service
+      const db = getFirestore(app);
+
+      const usersTable = collection(db, "users");
+      const pointTable = collection(db, "pointme");
+ 
+
+      let table = document.getElementById("tBody");
+
+      const verifNumber = document.getElementById("tel");
+      verifNumber.addEventListener("input", function () {
+        let numbersvalue = verifNumber.value;
+        if (numbersvalue == " " || isNaN(numbersvalue)) {
+          verifNumber.className += "  border-danger";
+
+          verifNumber.value = "";
+        } else {
+          verifNumber.classList.remove("border-danger");
+        }
+      });
+
+      function afficherTableau(data) {
+        let table = document.getElementById("tBody");
+        table.innerHTML = "";
+        let aftersort = data.sort(compareBy("hc"));
+        aftersort.forEach((element, index) => {
+          table.innerHTML += `<tr>
+      <td>${element.prenom}</td>
+      <td>${element.nom}</td>
+      <td>${element.arrivee}</td>
+      <td>${element.depart}</td>
+      <td><button type="button" id="${element.id}" class="btn btn-info boutonsortie text-danger ">sortie</button></td>
+      </tr> `;
+          let keys = document.querySelectorAll(".boutonsortie");
+          keys.forEach((key) =>
+            key.addEventListener("click", async (e) => {
+              let tenir = e.target.id;
+              console.log(tenir);
+
+              const docToModify = doc(sousCollection, tenir);
+
+              try {
+                await updateDoc(docToModify, {
+                  depart: new Date().toLocaleTimeString(),
+                });
+
+                const querySnapshot = await getDocs(sousCollection);
+                let chartdesortie = [];
+                let field;
+                querySnapshot.forEach((doc) => {
+                  // console.log(doc.id, " => ", doc.data());
+                  field = doc.data();
+                  console.log(field);
+                  field.id = doc.id;
+                  console.log(field);
+                  chartdesortie.push(field);
+                });
+                afficherTableau(chartdesortie);
+
+                swal({
+                  text: "Sortie enregistrer",
+                  icon: "success",
+                  buttons: false,
+                  showConfirmButton: false,
+                  animation: true,
+                  timer: 1500,
+                });
+              } catch (err) {
+                // alert('la date de sortie est expiré')
+                swal({
+                  text: "la date de sortie est expiré",
+                  icon: "error",
+                  buttons: false,
+                  showConfirmButton: false,
+                  animation: true,
+                  timer: 1500,
+                });
+                console.error(
+                  "Erreur lors de la mise à jour du document :",
+                  err
+                );
+              }
+            })
+          );
+          // console.log(keys);
+        });
+      
+      }
+
+      let currentDate = new Date();
+      let day = currentDate.getDate();
+      let month = currentDate.getMonth() + 1;
+      let year = currentDate.getFullYear();
+      let customId = "" + day + (month < 10 ? "0" : "") + month + year;
+
+      // Créeer document avec id personnalisé
+      const docperonnalisé = await doc(pointTable, customId);
+      const sousCollection = collection(docperonnalisé, "listedePresence");
+      const querySnapshot = await getDocs(sousCollection);
+      let chartdepart = [];
+      let field;
+      querySnapshot.forEach((doc) => {
+        // console.log(doc.id, " => ", doc.data());
+        field = doc.data();
+        // console.log(field);
+        field.id = doc.id;
+
+        // console.log(field);
+        chartdepart.push(field);
+      });
+      afficherTableau(chartdepart);
+
+      console.log("confirmerout", chartdepart);
+      enregistrer.addEventListener("click", async (e) => {
+        let input = Number(document.getElementById("tel").value);
+        console.log(typeof input);
+
+        const q = query(usersTable, where("numero", "==", input));
+
+        let user;
+
+        const querySnapshot = await getDocs(q);
+        querySnapshot.forEach((doc) => {
+          user = doc.id;
+        });
+        console.log("user", user);
+
+        if (typeof user === "undefined") {
+          swal({
+            text: "IL n'existe pas dans la base de donnée",
+            icon: "error",
+            buttons: false,
+            showConfirmButton: false,
+            animation: true,
+            timer: 2000,
+          });
+          // alert ('vous ne figurez pas sur la liste ')
+        } else {
+          const querySnapshot = await getDocs(sousCollection);
+          let chartdepartinside = [];
+          let field;
+          querySnapshot.forEach((doc) => {
+            field = doc.data();
+
+            field.id = doc.id;
+            field.userid = user;
+
+            chartdepartinside.push(field);
+          });
+
+          const userDocument = await doc(usersTable, user);
+          console.log(userDocument);
+          const userDoc = await getDoc(userDocument);
+          const q = query(
+            sousCollection,
+            where("nom", "==", userDoc.data().nom),
+            where("prenom", "==", userDoc.data().prenom)
+          );
+          const querySnapshot2 = await getDocs(q);
+          if (!querySnapshot2.empty) {
+            swal({
+              text: "Vous avez déjà pointé",
+              icon: "warning",
+              showConfirmButton: false,
+              buttons: false,
+              animation: true,
+              timer: 1500,
+            });
+            // alert('Vous avez déjà pointé');
+          } else {
+            if (userDoc.exists()) {
+              const date = new Date();
+              const heures = date.getHours();
+              const minutes = date.getMinutes();
+              const secondes = date.getSeconds();
+
+              const heuresEnSecondes = heures * 3600;
+              const minutesEnSecondes = minutes * 60;
+              const heureTotaleEnSecondes =
+                heuresEnSecondes + minutesEnSecondes + secondes;
+              console.log("heureTotaleEnSecondes", heureTotaleEnSecondes);
+              const donneeApointe = {
+                nom: userDoc.data().nom,
+                prenom: userDoc.data().prenom,
+                depart: "pas encore",
+                date: date.toLocaleDateString("fr-FR"),
+                arrivee: date.toLocaleTimeString(),
+                hc: heureTotaleEnSecondes,
+                statut: userDoc.data().statut
+              };
+
+              await addDoc(sousCollection, donneeApointe);
+              const querySnapshot = await getDocs(sousCollection);
+              let chart = [];
+              let field;
+              querySnapshot.forEach((doc) => {
+                field = doc.data();
+                console.log(field);
+                field.id = doc.id;
+
+                chart.push(field);
+              });
+              document.getElementById("tel").value = "";
+              afficherTableau(chart);
+              // document.location.reload()
+             
+              swal({
+                text: "Your point has been saved",
+                icon: "success",
+                buttons: false,
+                showConfirmButton: false,
+                animation: true,
+                timer: 1500,
+              });
+               function filterData() {
+         
+          
+          let nomAfiltrer = nomInput.value;
+          
+          let filteredData = chart.filter((element) => {
+            if (
+              nomAfiltrer !== "" &&
+              !element.nom.toLowerCase().includes(nomAfiltrer.toLowerCase())
+            ) {
+              afficherTableau(chart)
+              return false;
+            }
+          
+            return true;
+          });
+          afficherTableau(filteredData);
+        }
+
+        nomInput.addEventListener("input", filterData);
+            } else {
+              console.log(
+                `L'utilisateur avec le numero ${usertel} n'existe pas.`
+              );
+            }
+          }
+        }
+
+
+
+
+
+         
+      });
+
+      //       swal({
+      //   title: "Sweet!",
+      //   text: "Here's a custom image.",
+      //   imageUrl: "images/thumbs-up.jpg"
+      // });
+
+      const inputElement = document.getElementById("input-date");
+
+      inputElement.addEventListener("change", async () => {
+        const inputDate = new Date(inputElement.value);
+
+        const day = inputDate.getDate();
+        const month = inputDate.getMonth() + 1;
+        const year = inputDate.getFullYear();
+        const customIdrecherche =
+          "" + day + (month < 10 ? "0" : "") + month + year;
+
+        const docToSearch = doc(pointTable, customIdrecherche);
+
+        const sousCollection = collection(docToSearch, "listedePresence");
+        const querySnapshot = await getDocs(sousCollection);
+        let chartderecherche = [];
+        let field;
+        querySnapshot.forEach((doc) => {
+          field = doc.data();
+
+          field.id = doc.id;
+
+          chartderecherche.push(field);
+        });
+        afficherTableau(chartderecherche);
+        console.log("recherche", chartderecherche);
+
+        function filterData() {
+          console.log("recherche", chartderecherche);
+          let dateAFiltrer = document.getElementById("input-date").value;
+          let nomAfiltrer = nomInput.value;
+          console.log(dateAFiltrer);
+          let filteredData = chartderecherche.filter((element) => {
+            if (
+              nomAfiltrer !== "" &&
+              !element.nom.toLowerCase().includes(nomAfiltrer.toLowerCase())
+            ) {
+              return false;
+            }
+            if (dateAFiltrer == "") {
+              alert("choisissez une date s' il vous plait");
+              return false;
+            }
+            return true;
+          });
+          afficherTableau(filteredData);
+        }
+
+        nomInput.addEventListener("input", filterData);
+      });
+
+
+
+  function filterData() {
+         
+          
+          let nomAfiltrer = nomInput.value;
+          
+          let filteredData = chartdepart.filter((element) => {
+            if (
+              nomAfiltrer !== "" &&
+              !element.nom.toLowerCase().includes(nomAfiltrer.toLowerCase())
+            ) {
+              afficherTableau(chartdepart)
+              return false;
+            }
+          
+            return true;
+          });
+          afficherTableau(filteredData);
+        }
+
+        nomInput.addEventListener("input", filterData);
+
+
+
+
+      function compareBy(propertyName) {
+        return function (a, b) {
+          let x = a[propertyName];
+          let y = b[propertyName];
+          if (x < y) {
+            return 1;
+          } else if (x > y) {
+            return -1;
+          } else {
+            return 0;
+          }
+        };
+      }
+
+
+
+ </script>
+     </body>
+</html> 

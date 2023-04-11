@@ -1,0 +1,43 @@
+
+body{
+    background-image: url(../cool-background.png);
+}
+
+body{
+    background-image: url(../cool-background.png); 
+}
+/* body{
+    background-image: ur/l(../cool-background.png);
+}  */
+
+/* .backg1{
+    background: #2D9CDB;
+    color:white;
+}
+
+.bout1{
+    width: 652px;
+    height: 47px;
+    background: #2D9CDB;
+    border-radius: 13.617px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.cont1{
+    height: 100vh;
+
+}
+.gbt input:focus{
+    outline: none !important;
+    width: 100%;
+
+
+} */
+
+body{
+    background-image: url(../cool-background.png);
+}
+

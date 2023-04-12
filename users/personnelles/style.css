@@ -1,10 +1,6 @@
 /* ===============pas touche au css deja present ============= */
 
-<<<<<<< HEAD
 /* 
-=======
-
->>>>>>> 243686a8fffa6cd953f82672fb3b057a6adcf014
 .fall {
     z-index: 1;
 }
@@ -64,19 +60,11 @@ height: 620px;
 width: 200px;
 top: 10px;
 z-index: 2;
-<<<<<<< HEAD
 /* display: none; 
 }
 
 
 /* parties  test 
-=======
-/* display: none; */
-}
-
-
-/* parties  test */
->>>>>>> 243686a8fffa6cd953f82672fb3b057a6adcf014
 .test{
     width: 200px;
     padding: 10px 14px;
@@ -129,22 +117,14 @@ display: none !important;
         display: block !important;
     }
     .yerry, .merry{
-<<<<<<< HEAD
         display: none;
-=======
-display: none;
->>>>>>> 243686a8fffa6cd953f82672fb3b057a6adcf014
     }
     .test{
         margin-top: 30px;
         height: 120px !important;
         width: 80px !important;
     }
-<<<<<<< HEAD
 } */
-=======
-}
->>>>>>> 243686a8fffa6cd953f82672fb3b057a6adcf014
 
 /* ======================= fin du css pour le dashbords vous pouvez mettre votre css en bas================= */
 
@@ -152,34 +132,57 @@ display: none;
 
 
 
-<<<<<<< HEAD
 /* ===========top c'est parti============ */
 
 
-/* ========= MOHAMED SARIFOU DIALLO ========= */
+/* ========= Ibrahima Timera========= */
 
-body{
+/* body{
     font-family: Arial, Helvetica, sans-serif
 }
 
-<<<<<<< HEAD
-.filtre{
-    top: 48px;
-}
-=======
-/* ===========top c'est parti============ */
->>>>>>> 243686a8fffa6cd953f82672fb3b057a6adcf014
-=======
 .tabcoul{
     background-color:#ececec ;
 }
 
-.modalajou{
-    background: #c5bebe;
+.modalajou ,.ajouter{
+    background-color: #2b73b3;
 }
 
 input[type=text2]{
     background-color: #ececec;
     border: none;
+} */
+
+body{
+    font-family: Arial, Helvetica, sans-serif
 }
->>>>>>> f33669e465e9ef03cc6342aabf48c4e2e1314b6f
+
+.tabcoul{
+    background-color:#FFFFFF ;
+}
+
+.mytabl{
+    background-color:#ececec ;
+}
+
+
+
+input[type=text2]{
+    background-color: #FFFFFF;
+    border: none;
+}
+
+.icons{
+    color: #686d72;
+    font-size: 20px;
+    
+}
+
+.colorblock{
+    background-color: #0000006c;
+}
+
+.modalajou ,.ajouter{
+    background-color: #2b73b3;
+}

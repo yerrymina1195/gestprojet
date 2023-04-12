@@ -1,141 +1,249 @@
-
-// **** Ibrahima Timera JS CODE ***
-
-const tableauInStorage = JSON.parse(localStorage.getItem("tableauX")) || [];
-console.log(tableauInStorage);
-function onUpdate() {
-  localStorage.setItem("tableauX", JSON.stringify(tableauInStorage));
-  document.location.reload()
-}
-
-/*-------fonction ajouter qui va prendre les valeurs dans le input et le mettre dans l'objet personnel---------*/
-function ajouter() {
-let preno =document.getElementById("prenom").value;
-let no =document.getElementById("nom").value;
-let emai=document.getElementById("email").value;
-let adress=document.getElementById("adresse").value;
-let teleph=document.getElementById("Telephone").value;
-
-if (preno === "" || no === "" ||emai === ""||teleph=== ""||adress=== "") {
-  return  alert("veuillez saisir svp");
-}else{
-
-}
-  const personnel = {
-    firstName:preno,
-    nom:no,
-    mail:emai,
-    moy:adress,
-    tel: teleph,
-
-    isblocked:false,
-    id:new Date().getTime()
-  };
-
-  tableauInStorage.unshift(personnel);
-  onUpdate();
-  
-}
-/*------------fin du ajout--------*/
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
+import { getFirestore, addDoc, collection, getDocs,doc,getDoc, updateDoc,deleteDoc} from "https://www.gstatic.com/firebasejs/9.18.0/firebase-firestore.js";
 
 
-/*-----fonction affichage du tableau  ------------*/
-function afficher (tableau){
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-  const tbody = document.getElementById("tableBody");
-  tbody.innerHTML =""
-  tableau.forEach((element,index) => {
-    tbody.innerHTML += `<tr>
-        <td>${element.firstName}</td>
-        <td>${element.nom}</td>
-        <td>${element.mail}</td>
-        <td>${element.moy}</td>
-        <td>${element.tel}</td>
-       
-        <td><button type="submit" ${element.isblocked === false ? `class="btn mb-3" onclick="vue(${index})" data-bs-toggle="modal" data-bs-target="#showmod"` : `class="btn btn-secondary mb-3" `}><i class="fa-solid fa-eye"></i></button></td>
-        <td><button type="submit" ${element.isblocked === false ? `class="btn mb-3" onclick="edit(${index})" data-bs-toggle="modal" data-bs-target="#exampleModal"` : `class="btn btn-secondary mb-3" `}><i class="fa-solid fa-pen"></i></button></td>
-        <td><button type="submit" ${element.isblocked === false ? `class="btn mb-3" onclick="supprimer(${index})"` : `class="btn btn-secondary mb-3"`} ><i class="fa-solid fa-trash"></i></button></td>
-        <td><button type="submit" id="archis${index}" onclick="bloquage(${element.id})" class="btn  mb-3">${element.isblocked === false ? `<i class="fa-solid fa-box-archive"></i>` :` <i class="fa-solid fa-box-archive"></i>`} </button></td>
-      </tr> `;
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyDBApmRQEvhUbztpygJBab7_vFAQLCjVWE",
+  authDomain: "ajout-4f796.firebaseapp.com",
+  projectId: "ajout-4f796",
+  storageBucket: "ajout-4f796.appspot.com",
+  messagingSenderId: "1013523243494",
+  appId: "1:1013523243494:web:9f8ddbf4f5d19e6e5db627"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+
+const userperso = collection(db,'ajoutPersonnel');
+let archiv = document.getElementById('archiv')
+let Retour = document.getElementById('Retour')
+
+
+ajout.addEventListener('click',async (e) => {
+    let prenom = document.getElementById('prenom').value;
+    let nom = document.getElementById('nom').value;
+    let Telephone = document.getElementById('Telephone').value;
+    let adresse = document.getElementById('adresse').value;
+    let email = document.getElementById('mail').value;
+
+   await addDoc(collection(db, "ajoutPersonnel"), {
+        prenom: prenom,
+        nom: nom,
+        Telephone: Telephone,
+        adresse: adresse,
+        email: email,
+        isarchived: false
+    }); 
+    alert('Personnel ajouter');
+afficher()
+    
+    });
+    document.querySelector('#form').addEventListener('submit', (e) => {
+        e.preventDefault();
+    })
+
+
+afficher()
+
+    async function afficher(){
+      // archiv.innerHTML="Voir archivage"
+      archiv.addEventListener("click",test)
+      archiv.classList.remove("d-none")
+      Retour.classList.add("d-none")
+      const tab = [];
+      let con;
+      const querySnapshot = await getDocs(collection(db, "ajoutPersonnel"));
+      querySnapshot.forEach((doc) => {
+        con= doc.data();
+        const data ={...con, id: doc.id}
+        con.id = doc.id;
+          tab.push(data);
+      });
+      let tabnonarchived= tab.filter((element,index)=> element.isarchived=== false)
+      console.log(tabnonarchived);
+      
+      let table1 = document.getElementById('tbody');
+      table1.innerHTML =""
+      tabnonarchived.map(element => (
+          table1.innerHTML += `<tr>
+                      <td>${element.prenom}</td>
+                      <td>${element.nom}</td>
+                      <td>${element.email}</td>
+                      <td>${element.Telephone}</td>
+                      <td>${element.adresse}</td>
+                      <td id="${element.id}">
+                        <button type="button"  class="btn modifier btn-outline-secondary"
+                        data-bs-toggle="modal" data-bs-target="#exampleModal2"
+                        data-bs-whatever="@mdo">
+                          <i class="fa fa-pencil" aria-hidden="true"></i>
+                        </button>
+                        <button  class="btn supprime btn-outline-danger">
+                        <i class="fas fa-trash fs-5 text-danger"></i>
+                        </button>
+                        <button  class="btn archived btn-outline-info">
+                        <i class="fas fa-archive fs-5 text-info"></i>
+                      </button>
+                      </td>
+              </tr>`
+      ));
+
+      let openmodalbulletin = document.querySelectorAll("#modalbtn");
+      openmodalbulletin.forEach(element => {
+        element.addEventListener('click', modifier)
+      });
+      console.log(openmodalbulletin);
+
+
+      let btnsupprime= document.querySelectorAll(".supprime");
+      btnsupprime.forEach(element => {
+        element.addEventListener('click', async (e)=>{
+          // ajout.onclick= function () {
+          //   modal.classList.add("active");
+          // };
+        let cible = e.target.parentNode.parentNode.id;
+        let colectDoc = await doc(userperso,cible)
+        console.log(colectDoc);
+        const ly = await getDoc(colectDoc);
+         deleteDoc(colectDoc)
+
+          console.log(ly.data());
+          afficher()
+        }) 
+    });
+    
+    let btnmodif= document.querySelectorAll(".modifier");
+    btnmodif.forEach(element => {
+      element.addEventListener('click', async (e)=>{
+        let prenomam = document.getElementById('prenomam');
+        let nomam = document.getElementById('nomam');
+        let Telephoneam = document.getElementById('Telephoneam');
+        let adresseam = document.getElementById('adresseam');
+        let emailam = document.getElementById('mailam');
+      let cible = e.target.parentNode.parentNode.id;
+      let colectDoc = await doc(userperso,cible)
+      // console.log(colectDoc);
+      const ly = await getDoc(colectDoc);
+      console.log(ly.data().prenom);
+      let container=ly.data()
+      console.log(container.prenom);
+      prenomam.value=container.prenom
+      nomam.value=container.nom
+      Telephoneam.value=container.Telephone
+      adresseam.value=container.adresse
+      emailam.value=container.email
+      modif.addEventListener('click', async(e) => {
+      let prenomod = document.getElementById('prenomam').value;
+      let nomod = document.getElementById('nomam').value;
+      let Telephoneod = document.getElementById('Telephoneam').value;
+      let adresseod = document.getElementById('adresseam').value;
+      let emailod = document.getElementById('mailam').value;
+
+        await updateDoc(colectDoc, {
+          prenom: prenomod,
+          nom: nomod,
+          Telephone: Telephoneod,
+          adresse: adresseod,
+          email: emailod,
+        })
+        afficher()
+      })
+
+
+      
+
+
+      form.addEventListener('submit',(e)=>{
+        e.preventDefault();
+      })
+    
+  }) 
   });
 
 
-}
-afficher(tableauInStorage);
-/*-----------fin du fonction affichage---------------*/
-// Rechercher une personne dans le tableau 
-const input = document.getElementById("search")
-input.addEventListener("keyup", (e) => {
- 
-  const valeur = e.target.value
-  const result = tableauInStorage.filter((item) => (item.firstName.toLowerCase().includes(valeur.toLowerCase())) || (item.nom.toLowerCase().includes(valeur.toLowerCase())) || (item.mail.toLowerCase().includes(valeur.toLowerCase())) || (item.tel.toLowerCase().includes(valeur.toLowerCase())))
-  console.log(result);
-  afficher(result)
+    
+  let btnarchivage= document.querySelectorAll(".archived");
+  btnarchivage.forEach(element => {
+    element.addEventListener('click', async (e)=>{
+    
+    let cible = e.target.parentNode.parentNode.id;
+    let colectDoc = await doc(userperso,cible)
+    // console.log(colectDoc);
+    const ly = await getDoc(colectDoc);
+    console.log(ly.data());
+      await updateDoc(colectDoc, {
+        isarchived: true
+        
+      })
+      afficher()
+    form.addEventListener('submit',(e)=>{
+      e.preventDefault();
+    })
 }) 
+});
 
-function vue(index) {
-  // console.log(tableauInStorage[index].firstName);
-  document.getElementById("prenomShow").value = tableauInStorage[index].firstName;
-  document.getElementById("nomShow").value = tableauInStorage[index].nom;
-  document.getElementById("emailShow").value = tableauInStorage[index].mail;
-  document.getElementById("adresseShow").value = tableauInStorage[index].moy;
-  document.getElementById("TelephoneShow").value = tableauInStorage[index].tel;
+
+    }
+Retour.addEventListener("click",afficher)
+async function test(){
+  const tab = [];
+  let con;
+  const querySnapshot = await getDocs(collection(db, "ajoutPersonnel"));
+  querySnapshot.forEach((doc) => {
+    con= doc.data();
+    const data ={...con, id: doc.id}
+    con.id = doc.id;
+      tab.push(data);
+  });
+  let tabnonarchived= tab.filter((element,index)=> element.isarchived=== true)
+  console.log(tabnonarchived);
+  
+  let table1 = document.getElementById('tbody');
+  table1.innerHTML =""
+  tabnonarchived.map(element => (
+      table1.innerHTML += `<tr>
+                  <td>${element.prenom}</td>
+                  <td>${element.nom}</td>
+                  <td>${element.email}</td>
+                  <td>${element.Telephone}</td>
+                  <td>${element.adresse}</td>
+                  <td id="${element.id}">
+                 
+                   
+                    <button  class="btn unarchived btn-outline-info">
+                    <i class="fas fa-archive fs-5 text-info"></i>
+                  </button>
+                  
+                  </td>
+          </tr>`
+  ));
+  Retour.classList.remove("d-none")
+  archiv.classList.add("d-none")
+  let btnunarchivage= document.querySelectorAll(".unarchived");
+  btnunarchivage.forEach(element => {
+    element.addEventListener('click', async (e)=>{
+    
+    let cible = e.target.parentNode.parentNode.id;
+    let colectDoc = await doc(userperso,cible)
+    // console.log(colectDoc);
+    const ly = await getDoc(colectDoc);
+    console.log(ly.data());
+      await updateDoc(colectDoc, {
+        isarchived: false
+        
+      })
+      test()
+    form.addEventListener('submit',(e)=>{
+      e.preventDefault();
+    })
+}) 
+});
 }
-
-
-/*---------fonction supprimer ------------*/
-
-function supprimer(id) {
-  tableauInStorage.splice(id, 1);
-  onUpdate();
-}
-/*  fin du  fonction supprimer*/
-
-
-  /* ---------------fonction pour Modifier l'élément dans le tableau----------------- */
-
-function edit(index) {
-  document.getElementById("prenom").value = tableauInStorage[index].firstName;
-  document.getElementById("nom").value = tableauInStorage[index].nom;
-  document.getElementById("email").value = tableauInStorage[index].mail;
-  document.getElementById("adresse").value = tableauInStorage[index].moy;
-  document.getElementById("Telephone").value = tableauInStorage[index].tel;
-
-  let ajouterBouton = document.getElementById("adding");
-  ajouterBouton.innerHTML = "Enregistrer";
-  ajouterBouton.onclick = function() {
-    tableauInStorage[index].firstName = document.getElementById("prenom").value;
-    tableauInStorage[index].nom = document.getElementById("nom").value;
-    tableauInStorage[index].mail = document.getElementById("email").value;
-    tableauInStorage[index]. moy = document.getElementById("adresse").value;
-    tableauInStorage[index]. tel = document.getElementById("Telephone").value;
-     onUpdate();
-
-      ajouterBouton.innerHTML = "Ajouter";
-      ajouterBouton.onclick = ajouter;
-      
-    };
-}
-
-function bloquage(arc){
-  let state= tableauInStorage.find(e => e.id === arc);
-console.log(state);
-
-if(state.isblocked === false){
-  const index = tableauInStorage.findIndex(el => el.id === arc);
-
-  tableauInStorage[index].isblocked = true;
-
-}else{
-  const index = tableauInStorage.findIndex(el => el.id === arc);
-
-  tableauInStorage[index].isblocked = false;
-}
-onUpdate();
-}
-
-
-
-
-
+ 
 

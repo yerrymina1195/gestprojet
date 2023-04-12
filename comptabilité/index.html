@@ -2,306 +2,424 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compatabilité</title>
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <!-- fontawesme -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        .side_bare {
-            position: fixed;
-            z-index: 10;
-        }
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comptabilite</title>
 
-        .recherche {
-            z-index: 1;
-        }
-        #enregistrerdepense, #enregistrerrevenu, .modal-header{
-            background-color: #2b73b3;
-        } 
-    </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <!--LINK Font Awesone-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="dashbord.css">
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row flex-nowrap">
-            <!-- Sidebare -->
-            <div class="side_bare col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-light py-5">
-                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
-                        id="menu">
-                        <li class="nav-item mb-2">
-                            <a href="../dashbord/dashbord.html" class="nav-link align-middle px-0  text-secondary">
-                                <img src="./icones/icone dashboard.png" alt=""> <span
-                                    class="ms-1 d-none d-sm-inline">Dashboard</span>
-                            </a>
-                        </li>
-                        <li class="mb-2">
-                            <a href="#submenu1" data-bs-toggle="collapse"
-                                class="nav-link px-0 align-middle  text-secondary">
-                                <img src="./icones/icone users.png" alt=""> <span
-                                    class="ms-1 d-none d-sm-inline">Users</span>
-                            </a>
-                            <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
-                                <li class="w-100">
-                                    <a href="../users/eleves/bulletin.html" class="nav-link px-0"> <span
-                                            class="d-none d-sm-inline text-secondary">Eléves</span></a>
-                                </li>
-                                <li>
-                                    <a href="../users/professeurs/listeEleve.html" class="nav-link px-0"> <span
-                                            class="d-none d-sm-inline text-secondary">Proffesseurs</span></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="nav-link px-0"> <span
-                                            class="d-none d-sm-inline text-secondary">Personnelles</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="mb-2">
-                            <div class="bg-primary p-2 text-light bg-opacity-25 rounded">
-                                <a href="index.html" class="nav-link px-0 align-middle">
-                                    <img src="./icones/icone compta.png" alt=""> <span
-                                        class="ms-1 d-none d-sm-inline">Comptabilité</span></a>
-                            </div>
-                        </li>
-                        <li class="mb-2">
-                            <a href="../statistiques/index.html" class="nav-link px-0 align-middle  text-secondary">
-                                <img src="./icones/icone stats.png" alt=""> <span
-                                    class="ms-1 d-none d-sm-inline">Statistiques</span></a>
-                        </li>
-                        <li>
-                            <a href="../pointage/pointage.html" class="nav-link px-0 align-middle text-secondary">
-                                <img src="./icones/icone pointage.png" alt=""> <span
-                                    class="ms-1 d-none d-sm-inline">Pointage</span></a>
-                        </li>
-                        
-                </div>
-            </div>
-            <div class="col-lg-10 ms-auto py-3">
-                <!-- input recherche et profile -->
-                <div class="d-flex recherche fixed-top justify-content-around bg-light">
-                    <form class="d-flex align-items-center border border-primary rounded-3 "
-                        style="border-color: #2D9CDB;">
-                        <i class="fa fa-search me-2" style="color: 
-#2D9CDB;"></i>
-                        <input class="form border-0" style="color: 
-#2D9CDB; border-color: #2D9CDB;" type="search" placeholder="Recherche" aria-label="Search">
-                    </form>
-                    <div class="d-flex">
-                        <p class="fw-bold pt-3">Makhan Diakho</p>
-                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
-                            class="rounded-circle img-fluid ms-3 " style="width: 50px;" />
-                    </div>
-                </div>
-                <!-- total revenus et dépences -->
-                <h5 class="fw-bold mt-5" style="color: 
-#2D9CDB;">Comptabilité</h5>
-                <div class="d-flex justify-content-around pt-5">
-                    <div class="card shadow-lg rounded-3" style="width: 467px; height: 156px;">
-                        <div class="card-body">
-                            <p class="text-secondary text-center fs-4 text-uppercase">Revenus</p>
-                            <div class="d-flex justify-content-between">
-                                <p class="align-bottom fw-bold" id="revenu">0 FCFA</p>
-                                <img src="./icones/icone revenus.png" alt="">
-                            </div>
-                            <p class="text-start text-dark" id="dateRev">aa/mm/dd</p>
-                        </div>
-                    </div>
-                    <div class="card shadow-lg rounded-3" style="width: 467px; height: 156px;">
-                        <div class="card-body">
-                            <p class="text-secondary text-center fs-4 text-uppercase">Dépenses</p>
-                            <div class="d-flex justify-content-between">
-                                <span class="align-bottom fw-bold" id="montantDep">0  FCFA</span>
-                                <img src="./icones/icone dépenses.png" alt="">
-                            </div>
-                            <p class="text-start text-dark" id="dateDep">aa/mm/dd</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Boutons -->
-                <div class="boutons pt-5 d-flex justify-content-around mb-4">
-                    <button class="btn btn-light fw-bold px-3 py-2 revenu"  style="background-color: #E0E8E7;">Revenus</button>
-                    <button class="btn btn-light fw-bold px-3 py-2 depense"  style="background-color: #E0E8E7;">Dépense</button>
-                </div>
-                <!--=============tableaux============== -->
-                 <!-- ==========================depenses=============================== -->
-                 <div class=" table-depenses py-5 px-4 rounded-3" id="typed" style="background-color: #E0E8E7;">
-                    <div class="d-flex justify-content-between">
-                        <h5 class="titredepense">Historique des Dépenses</h5>
-                         <!-- Button trigger modal  -->
-                        <button type="button" class="btn btn-secondary bg-opacity-10 fw-bold px-3 py-2"
-                            data-bs-toggle="modal" id="maskmodalod" data-bs-target="#exampleModal">
-                            Ajouter une dépense
-                        </button> 
 
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Ajouter une dépense</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form class="p-5 pt-4" >
-                                            <div class="row mb-3 ">    
-                                                <div class="col-md-6">
-                                                    <label class="fw-bold">Type</label> <br>
-                                                    <input class="rounded-2 shadow p-2 w-100 type form-control" id="typedepense" type="text"/>
-                                                </div>
-                                    
-                                                <div class="col-md-6">
-                                                    <label class="fw-bold">Description</label> <br>
-                                                    <input class="rounded-2 shadow p-2 w-100 description form-control" id="descriptiondepense" type="text"/>
-                                                </div>                  
-                                            </div>
-                                    
-                                            <div class="row mb-3">
-                                                <div class="col-md-6">
-                                                    <label class="fw-bold">Date</label> <br>
-                                                    <input class="rounded-2 shadow p-2 w-100 date form-control" id="datedepense" type="date"/>
-                                                </div> 
-                                                <div class="col-md-6">
-                                                    <label class="fw-bold">Montant</label> <br>
-                                                    <input class="rounded-2 shadow p-2 w-100 montant form-control" id="montantdepense" type="number"/>
-                                                </div>                 
-                                            </div>
-                                    
-                                            <div class="form-group row mb-3 float-end">
-                                                <div class="col-12">
-                                                  <button class="btn text-white border-0 fw-bold shadow" type="button" id="enregistrerdepense">ENREGISTRER</button>
-                                                </div>
-                                            </div>               
-                                        </form>  
-                                    </div>
-                                </div>
-                            </div>
-                        </div> 
-                    </div> 
-                   <div class="card shadow rounded-3 mt-3">
-                        <table class="table table-striped maskdepense">
-                            <thead>
-                                <tr>
-                                    <th scope="col">TypeDepense</th>
-                                    <th scope="col">Description</th>
-                                    <th scope="col">Date</th>
-                                    <th scope="col">Montant</th>
-                                </tr>
-                            </thead>
-                            <tbody id="affiched"></tbody>
-                        </table>
-                    </div> 
-                </div>  
-                <div class=" table-revenus py-5 px-4 rounded-3" id="typer" style="background-color: #E0E8E7;">
-                    <div class="d-flex justify-content-between">
-                        <h5 id="titrerevenu">Historique des revenus</h5>
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-secondary bg-opacity-10 fw-bold px-3 py-2"
-                            data-bs-toggle="modal" id="maskmodalr" data-bs-target="#exampleModal1">
-                            Ajouter un Revenu
-                        </button>
-
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Ajouter une entrée</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form class="p-5 pt-4" >
-                                            <div class="row mb-3 ">    
-                                                <div class="col-md-6">
-                                                    <label class="fw-bold">Type</label> <br>
-                                                    <input class="rounded-2 shadow p-2 w-100 type form-control" id="typerevenu" type="text"/>
-                                                </div>
-                                    
-                                                <div class="col-md-6">
-                                                    <label class="fw-bold">Description</label> <br>
-                                                    <input class="rounded-2 shadow p-2 w-100 description form-control" id="descriptionrevenu" type="text"/>
-                                                </div>                  
-                                            </div>
-                                    
-                                            <div class="row mb-3">
-                                                <div class="col-md-6">
-                                                    <label class="fw-bold">Date</label> <br>
-                                                    <input class="rounded-2 shadow p-2 w-100 date form-control" id="daterevenu" type="date"/>
-                                                </div> 
-                                                <div class="col-md-6">
-                                                    <label class="fw-bold">Montant</label> <br>
-                                                    <input class="rounded-2 shadow p-2 w-100 montant form-control" id="montantrevenu" type="number"/>
-                                                </div>                 
-                                            </div>
-                                    
-                                            <div class="form-group row mb-3 float-end">
-                                                <div class="col-12">
-                                                  <button class="btn text-white border-0 fw-bold shadow" type="button"  id="enregistrerrevenu">ENREGISTRER</button>
-                                                </div>
-                                            </div>               
-                                        </form>  
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card shadow rounded-3 mt-3">
-                        <table class="table table-striped" id="maskrevenu">
-                            <thead>
-                                <tr>
-                                    <th scope="col">TypeRevenu</th>
-                                    <th scope="col">Description</th>
-                                    <th scope="col">Date</th>
-                                    <th scope="col">Montant</th>
-                                </tr>
-                            </thead>
-                            <!-- <tbody class="affiche"></tbody> -->
-                            <tbody id="affiche"></tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
+  <div class="">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top p-4 fall">
+      <div class="container">
+        <div class="offset-md-3">
         </div>
-    </div>  
+        <div class="d-none d-sm-block">
+        </div>
+        <div class="border-0    flechete d-block d-sm-none     d-flex align-items-center justify-content-end">
+          <a class=" d-flex align-items-center justify-content-center rounded-circle " data-bs-toggle="offcanvas"
+            href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+            <i class="fas fa-bars"></i>
+          </a>
+
+        </div>
+
+    </nav>
+  </div>
+  <div class="container-fluid ">
+    <div class="row">
+      <div class="col-sm-2 d-sm-block   pt-3 position-relative ">
+        <div class="d-md-none d-flex flex-column test close  bg-white position-fixed    ">
+
+          <div class="d-flex mb-2 p-3 justify-content-center">
+            <a href="./dashbord.html" class=" yerry p-2  w-100 text-center   " data-bs-toggle="tooltip"
+              data-bs-placement="right" title="Dashboars">
+              <img src="./image/icon4.png" alt="photo" class="icon5  img-fluid ">
+            </a>
+
+          </div>
+          <div class="d-flex mb-2 justify-content-center   ">
+
+
+            <div class="accordion  " id="accordionExample">
+
+              <div class="accordion-item bg-transparent   border-0">
+                <h5 class="accordion-header p-3" id="headingTwi">
+                  <button class=" collapsed border-0 bg-transparent merry px-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwi" aria-expanded="false" aria-controls="collapseTwo">
+                    <img src="./image/icon0.png" alt="photo" class="icon5 img-fluid w-100  " data-bs-toggle="tooltip"
+                      data-bs-placement="right" title="USERS">
+
+                  </button>
+                </h5>
+                <div id="collapseTwi" class="accordion-collapse collapse h-100" aria-labelledby="headingTwi"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body d-flex flex-column   p-0">
+                    <a class=" yerry px-4 py-2  mb-2 " href="../users/eleves/bulletin.html">eleve</a>
+                    <a class=" yerry p-2  mb-2  " href="../users/professeurs/classssses.html">professeur</a>
+                    <a class=" yerry p-2   " href=" ../users/personnelles/index.html ">personnels</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="d-flex mb-2 justify-content-center">
+            <a href="" class="  yerry p-3 w-100 text-center  " data-bs-toggle="tooltip" data-bs-placement="right"
+              title="comptablité">
+              <img src="./image/icon1.png" alt="photo" class="icon5   img-fluid ">
+
+            </a>
+          </div>
+          <div class="d-flex mb-2 justify-content-center ">
+            <a href="" class=" text-center yerry  p-3 w-100" data-bs-toggle="tooltip" data-bs-placement="right"
+              title="statistiques">
+              <img src="./image/icon2.png" alt="photo" class="icon5 img-fluid ">
+
+            </a>
+          </div>
+          <div class="d-flex  justify-content-center p-3 ">
+            <a href="" class=" text-center  yerry  p-2 w-100 " data-bs-toggle="tooltip" data-bs-placement="right"
+              title="Pointage">
+              <img src="./image/icon3.png" alt="photo" class="icon5 img-fluid ">
+
+            </a>
+          </div>
 
 
 
 
-    <!-- <div class="table-responsive">
+          <div class="offcanvas offcanvas-start CHANGED" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasExampleLabel">MENU</h5>
+              <button type="button" class=" border-0 bg-transparent rounded-circle flechete text-reset"
+                data-bs-dismiss="offcanvas" aria-label="Close">
+                <i class="fas fa-arrow-left"></i>
+              </button>
+            </div>
+            <div class="offcanvas-body">
+              <div class="col-12 mina ps-4">
+                <div class="dash d-flex mb-3 ">
+                  <a href="./dashbord.html" class="d-flex align-items-center baba p-2 w-100  ">
+                    <img src="./image/icon4.png" alt="photo" class="icon4 img-fluid ">
+                    <p class=" ms-4 mb-0">Dashboars</p>
+                  </a>
+                </div>
+                <div class=" d-flex mb-3 ">
 
-        <table class="table table-bordered  table-striped table-success table-hover" id="table">
-            <thead>
-              <tr>
-                <th>Type</th>
-                <th>Description</th>
-                <th>Date</th>
-                <th>Montants</th>
-              </tr>
-            </thead>
-            <tbody id="affiche">
-            </tbody>
-          </table>
-    </div> -->
 
-    <script type="module">
-         // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
-  import { collection, addDoc, getFirestore, getDocs} from "https://www.gstatic.com/firebasejs/9.19.1/firebase-firestore.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+                  <div class="accordion p-2 w-100 " id="accordionExample">
 
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
+                    <div class="accordion-item bg-transparent   border-0">
+                      <h5 class="accordion-header  " id="headingTwa">
+                        <button
+                          class=" collapsed border-0 bg-transparent w-100 d-flex px-0  justify-content-between align-items-center "
+                          type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwa" aria-expanded="false"
+                          aria-controls="collapseTwa">
+                          <img src="./image/icon0.png" alt="photo" class="icon4 img-fluid ">
+                          <p class="mb-0 nam ">Users</p>
+                          <img src="./image/icon6.png" class="img-fluid " alt="">
+                        </button>
+                      </h5>
+                      <div id="collapseTwa" class="accordion-collapse collapse  " aria-labelledby="headingTwa"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body  d-flex flex-column px-0">
+                          <a class="baba  mb-3" href="../users/eleves/bulletin.html">eleve</a>
+                          <a class="baba mb-3" href="../users/professeurs/classssses.html">professeur</a>
+                          <a class="baba" href="../users/personnelles/index.html">personnels</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class=" d-flex    mb-3 ">
+                  <a href="/comptabilité/index.html" class="d-flex align-items-center baba p-2 w-100  ">
+                    <img src="./image/icon1.png" alt="photo" class="icon4  img-fluid ">
+                    <p class="ms-4 mb-0 ">Comptabilite</p>
+                  </a>
+                </div>
+
+                <div class=" d-flex mb-3  ">
+                  <a href="../statistiques/index.html" class="d-flex align-items-center p-2 w-100 baba   ">
+                    <img src="./image/icon2.png" alt="photo" class="icon4 img-fluid ">
+                    <p class="ms-4 mb-0">Statistique</p>
+                  </a>
+                </div>
+                <div class=" d-flex  ">
+                  <a href="../pointage/liste de presence/index.html" class="d-flex align-items-center p-2 w-100 baba  ">
+                    <img src="./image/icon3.png" alt="photo" class="icon4 img-fluid ">
+                    <p class="ms-4 mb-0">Pointage</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container d-none d-md-block px-2 pt-5 py-3 bg-white position-fixed site">
+          <div class="row mx-auto">
+
+            <div class="col-12 mina ">
+              <div class="dash d-flex  mb-3 ">
+                <a href="dashbord.html" class="d-flex align-items-center baba p-2 w-100  ">
+                  <img src="./image/icon4.png" alt="photo" class="icon4 img-fluid ">
+                  <p class=" ms-4 mb-0">Dashboars</p>
+                </a>
+              </div>
+              <div class=" d-flex mb-3 ">
+
+
+                <div class="accordion p-2 w-100 " id="accordionExample">
+
+                  <div class="accordion-item bg-transparent   border-0">
+                    <h5 class="accordion-header  p-1 w-100 " id="headingTwo">
+                      <button
+                        class=" collapsed border-0 bg-transparent w-100 d-flex px-0   justify-content align-items-center "
+                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                        aria-controls="collapseTwo">
+                        <img src="./image/icon0.png" alt="photo" class="icon4 img-fluid ">
+                        <p class="mb-0 nam ms-4  me-5">Users</p>
+                        <img src="./image/icon6.png" class="img-fluid " alt="">
+                      </button>
+                    </h5>
+                    <div id="collapseTwo" class="accordion-collapse collapse  " aria-labelledby="headingTwo"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body  d-flex flex-column px-0">
+                        <a class="baba  mb-3" href="../users/eleves/bulletin.html">eleve</a>
+                        <a class="baba mb-3" href="../users/professeurs/classssses.html">professeur</a>
+                        <a class="baba" href=" ../users/personnelles/index.html">personnels</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class=" d-flex    mb-3 ">
+                <a href="" class="d-flex align-items-center baba p-2 w-100  ">
+                  <img src="./image/icon1.png" alt="photo" class="icon4  img-fluid ">
+                  <p class="ms-4 mb-0 ">Comptabilite</p>
+                </a>
+              </div>
+
+              <div class=" d-flex mb-3  ">
+                <a href="../statistiques/index.html" class="d-flex align-items-center p-2 w-100 baba   ">
+                  <img src="./image/icon2.png" alt="photo" class="icon4 img-fluid ">
+                  <p class="ms-4 mb-0">Statistique</p>
+                </a>
+              </div>
+              <div class=" d-flex  ">
+                <a href="../pointage/liste de presence/index.html" class="d-flex align-items-center p-2 w-100 baba  ">
+                  <img src="./image/icon3.png" alt="photo" class="icon4 img-fluid ">
+                  <p class="ms-4 mb-0">Pointage</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+                <!-- c'est dans cette colonne que vous allez mettre votre contenu ou tableau et svp non touche au javascripte -->
+                     <!-- Enlevez juste le lorem ipsum et mettez y les travaux effectués s'il ya un probleme suis disponible -->
+
+
+
+                <div class="col-9 offset-1 selection py-5 ">
+                    <h5 class="fw-bold mt-5" style="color: 
+                    #2D9CDB;">Comptabilité</h5>
+                                    <div class="row mb-5 d-flex justify-content-around ">
+                                        <div class="card shadow-lg rounded-3 mb-5 col-md-6 col-sm-12 col-lg-6" style="width: 467px; height: 156px;">
+                                            <div class="card-body">
+                                                <p class="text-secondary text-center fs-4 text-uppercase">Revenus</p>
+                                                <div class="d-flex justify-content-between">
+                                                    <p class="align-bottom fw-bold" id="revenu">0 FCFA</p>
+                                                    <img src="./icones/icone revenus.png" alt="">
+                                                </div>
+                                                <p class="text-start text-dark" id="dateRev">aa/mm/dd</p>
+                                            </div>
+                                        </div>
+                                        <div class="card shadow-lg rounded-3 col-md-6 col-sm-12 col-lg-6" style="width: 467px; height: 156px;">
+                                            <div class="card-body">
+                                                <p class="text-secondary text-center fs-4 text-uppercase">Dépenses</p>
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="align-bottom fw-bold" id="montantDep">0  FCFA</span>
+                                                    <img src="./icones/icone dépenses.png" alt="">
+                                                </div>
+                                                <p class="text-start text-dark" id="dateDep">aa/mm/dd</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Boutons -->
+                                    <div class="boutons pt-5 d-flex justify-content-around mb-4">
+                                        <button class="btn btn-light fw-bold px-3 py-2 revenu"  style="background-color: #E0E8E7;">Revenus</button>
+                                        <button class="btn btn-light fw-bold px-3 py-2 depense"  style="background-color: #E0E8E7;">Dépense</button>
+                                    </div>
+                                    <!--=============tableaux============== -->
+                                     <!-- ==========================depenses=============================== -->
+                                     <div class="container-fluid table-depenses py-5 px-4 rounded-3" id="typed" style="background-color: #E0E8E7;">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="titredepense">Historique des Dépenses</h5>
+                                             <!-- Button trigger modal  -->
+                                            <button type="button" class="btn btn-secondary bg-opacity-10 fw-bold px-3 py-2"
+                                                data-bs-toggle="modal" id="maskmodalod" data-bs-target="#exampleModal">
+                                                Ajouter une dépense
+                                            </button> 
+                    
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                                aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Ajouter une dépense</h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                                aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <form class="p-5 pt-4" >
+                                                                <div class="row mb-3 ">    
+                                                                    <div class="col-md-6">
+                                                                        <label class="fw-bold">Type</label> <br>
+                                                                        <input class="rounded-2 shadow p-2 w-100 type form-control" id="typedepense" type="text"/>
+                                                                    </div>
+                                                        
+                                                                    <div class="col-md-6">
+                                                                        <label class="fw-bold">Description</label> <br>
+                                                                        <input class="rounded-2 shadow p-2 w-100 description form-control" id="descriptiondepense" type="text"/>
+                                                                    </div>                  
+                                                                </div>
+                                                        
+                                                                <div class="row mb-3">
+                                                                    <div class="col-md-6">
+                                                                        <label class="fw-bold">Date</label> <br>
+                                                                        <input class="rounded-2 shadow p-2 w-100 date form-control" id="datedepense" type="date"/>
+                                                                    </div> 
+                                                                    <div class="col-md-6">
+                                                                        <label class="fw-bold">Montant</label> <br>
+                                                                        <input class="rounded-2 shadow p-2 w-100 montant form-control" id="montantdepense" type="number"/>
+                                                                    </div>                 
+                                                                </div>
+                                                        
+                                                                <div class="form-group row mb-3 float-end">
+                                                                    <div class="col-12">
+                                                                      <button class="btn text-white border-0 fw-bold shadow" type="button" id="enregistrerdepense">ENREGISTRER</button>
+                                                                    </div>
+                                                                </div>               
+                                                            </form>  
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div> 
+                                       <div class="card shadow rounded-3 mt-3 table-responsive">
+                                            <table class="table table-striped maskdepense table table-borderless " style="overflow-x:scroll ;">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">TypeDepense</th>
+                                                        <th scope="col">Description</th>
+                                                        <th scope="col">Date</th>
+                                                        <th scope="col">Montant</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="affiched"></tbody>
+                                            </table>
+                                        </div> 
+                                    </div>  
+                                    <div class=" table-revenus py-5 px-4 rounded-3 container-fluid" id="typer" style="background-color: #E0E8E7;">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 id="titrerevenu">Historique des revenus</h5>
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-secondary bg-opacity-10 fw-bold px-3 py-2"
+                                                data-bs-toggle="modal" id="maskmodalr" data-bs-target="#exampleModal1">
+                                                Ajouter un Revenu
+                                            </button>
+                    
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                                aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Ajouter une entrée</h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                                aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <form class="p-5 pt-4" >
+                                                                <div class="row mb-3 ">    
+                                                                    <div class="col-md-6">
+                                                                        <label class="fw-bold">Type</label> <br>
+                                                                        <input class="rounded-2 shadow p-2 w-100 type form-control" id="typerevenu" type="text"/>
+                                                                    </div>
+                                                        
+                                                                    <div class="col-md-6">
+                                                                        <label class="fw-bold">Description</label> <br>
+                                                                        <input class="rounded-2 shadow p-2 w-100 description form-control" id="descriptionrevenu" type="text"/>
+                                                                    </div>                  
+                                                                </div>
+                                                                <div class="row mb-3">
+                                                                    <div class="col-md-6">
+                                                                        <label class="fw-bold">Date</label> <br>
+                                                                        <input class="rounded-2 shadow p-2 w-100 date form-control" id="daterevenu" type="date"/>
+                                                                    </div> 
+                                                                    <div class="col-md-6">
+                                                                        <label class="fw-bold">Montant</label> <br>
+                                                                        <input class="rounded-2 shadow p-2 w-100 montant form-control" id="montantrevenu" type="number"/>
+                                                                    </div>                 
+                                                                </div>
+                                                        
+                                                                <div class="form-group row mb-3 float-end">
+                                                                    <div class="col-12">
+                                                                      <button class="btn text-white border-0 fw-bold shadow" type="button"  id="enregistrerrevenu">ENREGISTRER</button>
+                                                                    </div>
+                                                                </div>               
+                                                            </form>  
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card shadow rounded-3 mt-3 table-responsive">
+                                            <table class="table table-striped" id="maskrevenu">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">TypeRevenu</th>
+                                                        <th scope="col">Description</th>
+                                                        <th scope="col">Date</th>
+                                                        <th scope="col">Montant</th>
+                                                    </tr>
+                                                </thead>
+                                                <!-- <tbody class="affiche"></tbody> -->
+                                                <tbody id="affiche"></tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                        <script type="module">
+                             // Import the functions you need from the SDKs you need
+                      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+                      import { collection, addDoc, getFirestore, getDocs} from "https://www.gstatic.com/firebasejs/9.19.1/firebase-firestore.js";
+                      // TODO: Add SDKs for Firebase products that you want to use
+                      // https://firebase.google.com/docs/web/setup#available-libraries
+                    
+                      // Your web app's Firebase configuration
+                      const firebaseConfig = {
   apiKey: "AIzaSyDn6PYE_7HYD1pATm1S6DBDjsYMigiBQ00",
   authDomain: "pointage-1c893.firebaseapp.com",
   projectId: "pointage-1c893",
@@ -309,237 +427,270 @@
   messagingSenderId: "551841692809",
   appId: "1:551841692809:web:026a70f6b5880338785a58"
 };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-        // ====================function revenu===================================
-let affiches = document.getElementById('affiche');
-let btnRevenu = document.getElementById('enregistrerrevenu');
-    btnRevenu.addEventListener('click', function (e){
-// =============recuperation des values input==============
-    let typeRevenu = document.getElementById('typerevenu').value;
-    let descriptionRevenu = document.getElementById('descriptionrevenu').value;
-    let dateRevenu = document.getElementById('daterevenu').value;
-    let montantRevenu = Number (document.getElementById('montantrevenu').value);
-
-    if (!typeRevenu || !descriptionRevenu || !dateRevenu || !montantRevenu) {
-        alert("Veuillez remplir tous les champs!");
-        return;
-    }else{
-        addDoc(collection(db, "revenus"), {
-    typeRevenu: typeRevenu,
-    descriptionRevenu: descriptionRevenu,
-    dateRevenu: dateRevenu,
-    montantRevenu: montantRevenu,
-
-})
-}
-    document.getElementById('typerevenu').value = '';
-    document.getElementById('descriptionrevenu').value = '';
-    document.getElementById('daterevenu').value = '';
-    document.getElementById('montantrevenu').value = '';
-// getRevenus()
-    });
-    document.addEventListener('DOMContentLoaded', async function() {
-  // charger les données à partir de la base de données et les afficher sur la page
-  const querySnapshot = await getDocs(collection(db, "revenus"));
-  const tab = [];
-  querySnapshot.forEach((doc) => {
-    tab.push(doc.data());
-    // console.log(doc.data().montantRevenu);
-
-    const  afficher = `
-    <tr>
-    <td>${doc.data().typeRevenu}</td>
-    <td>${doc.data().descriptionRevenu}</td>
-    <td>${doc.data().dateRevenu}</td>
-    <td>${doc.data().montantRevenu}</td>
-    </tr>`;
-    affiches.innerHTML += afficher;
+                    
+                      // Initialize Firebase
+                      const app = initializeApp(firebaseConfig);
+                      const db = getFirestore(app);
+                            // ====================function revenu===================================
+                    let affiches = document.getElementById('affiche');
+                    let btnRevenu = document.getElementById('enregistrerrevenu');
+                        btnRevenu.addEventListener('click', function (e){
+                    // =============recuperation des values input==============
+                        let typeRevenu = document.getElementById('typerevenu').value;
+                        let descriptionRevenu = document.getElementById('descriptionrevenu').value;
+                        let dateRevenu = document.getElementById('daterevenu').value;
+                        let montantRevenu = Number (document.getElementById('montantrevenu').value);
+                    
+                        if (!typeRevenu || !descriptionRevenu || !dateRevenu || !montantRevenu) {
+                            alert("Veuillez remplir tous les champs!");
+                            return;
+                        }else{
+                            addDoc(collection(db, "revenus"), {
+                        typeRevenu: typeRevenu,
+                        descriptionRevenu: descriptionRevenu,
+                        dateRevenu: dateRevenu,
+                        montantRevenu: montantRevenu,
+                    
+                    })
+                    }
+                        document.getElementById('typerevenu').value = '';
+                        document.getElementById('descriptionrevenu').value = '';
+                        document.getElementById('daterevenu').value = '';
+                        document.getElementById('montantrevenu').value = '';
+                    // getRevenus()
+                        });
+                        document.addEventListener('DOMContentLoaded', async function() {
+                      // charger les données à partir de la base de données et les afficher sur la page
+                      const querySnapshot = await getDocs(collection(db, "revenus"));
+                      const tab = [];
+                      querySnapshot.forEach((doc) => {
+                        tab.push(doc.data());
+                        // console.log(doc.data().montantRevenu);
+                    
+                        const  afficher = `
+                        <tr>
+                        <td>${doc.data().typeRevenu}</td>
+                        <td>${doc.data().descriptionRevenu}</td>
+                        <td>${doc.data().dateRevenu}</td>
+                        <td>${doc.data().montantRevenu}</td>
+                        </tr>`;
+                        affiches.innerHTML += afficher;
+                        
+                        // verification
+                        const revenue = doc.data();
+                        const totalRevenu = document.getElementById('revenu');
+                        const currentRevenu = parseInt(totalRevenu.innerHTML);
+                        console.log(typeof(currentRevenu));
+                        totalRevenu.innerText = `${(currentRevenu + revenue.montantRevenu)} FCFA`;
+                        // const dateRevenuEl = document.getElementById('dateRev');
+                        // dateRevenuEl.innerText = revenue.date;
+                        //  console.log('ddddd' + typeof(revenue.montantRevenu));
+                    
+                    
+                    
+                      const daterevenu = document.getElementById('dateRev');
+                      daterevenu.innerHTML = doc.data().dateRevenu;
+                      console.log('yyyyy' + doc.data().dateRevenu);
+                    
+                      });
+                    });
+                    
+                    
+                        
+                    
+                      
+                    
+                        // ========================fonction depense============================
+                        // let affiches = document.getElementById('affiche');
+                        let affiched = document.getElementById('affiched');
+                            let btnDepense = document.getElementById('enregistrerdepense');
+                                btnDepense.addEventListener('click', function (){
+                                //   e.preventDefault();
+                              
+                            let typeDepense = document.getElementById('typedepense').value;
+                            let descriptionDepense = document.getElementById('descriptiondepense').value;
+                            let dateDepense = document.getElementById('datedepense').value;
+                            let montantDepense = Number (document.getElementById('montantdepense').value);
+                        
+                            if (!typeDepense || !descriptionDepense || !dateDepense || !montantDepense) {
+                                alert("Veuillez remplir tous les champs!");
+                                return;
+                            }else{
+                            addDoc(collection(db, "depenses"), {
+                            typeDepense: typeDepense,
+                            descriptionDepense: descriptionDepense,
+                            dateDepense: dateDepense,
+                            montantDepense: montantDepense,
+                    
+                      })
+                      
+                        }
+                        document.getElementById('typedepense').value;
+                        document.getElementById('descriptiondepense').value;
+                        document.getElementById('datedepense').value;
+                        document.getElementById('montantdepense').value;
+                    
+                    // getDepenses()
+                    })
+                    
+                    // document.addEventListener('DOMContentLoaded', async function() {
+                      // charger les données à partir de la base de données et les afficher sur la page
+                      const querySnapshot = await getDocs(collection(db, "depenses"));
+                    const totalDepense = document.getElementById('montantDep');
+                    const totalRevenu = document.getElementById('revenu');
+                    let currentDepense = parseInt(totalDepense.innerHTML);
+                    let currentRevenu = parseInt(totalRevenu.innerHTML);
+                    
+                    querySnapshot.forEach((doc) => {
+                      const affichede = `
+                        <tr>
+                        <td>${doc.data().typeDepense}</td>
+                        <td>${doc.data().descriptionDepense}</td>
+                        <td>${doc.data().dateDepense}</td>
+                        <td>${doc.data().montantDepense}</td>
+                        </tr>`;
+                      affiched.innerHTML += affichede;
+                    
+                      const montantRevenu = doc.data().montantRevenu;
+                      if (!isNaN(montantRevenu)) {
+                        currentRevenu += montantRevenu;
+                      } else {
+                        console.log("La valeur de doc.data().montantRevenu n'est pas un nombre valide !");
+                      }
+                    
+                      currentDepense += doc.data().montantDepense;
+                      const datedepence = document.getElementById('dateDep');
+                      datedepence.innerText = doc.data().dateDepense;
+                    });
+                    
+                    const nvRevenu = `${currentRevenu - currentDepense} FCFA`;
+                    totalRevenu.innerHTML = nvRevenu;
+                    totalDepense.innerText = `${currentDepense} FCFA`;
+                    
+                    
+                    // ============================recuperer les btns et le modal pouir les masquer============================
+                    let masquerDepense = document.getElementById('typed');
+                    masquerDepense.style.display = 'none'
+                    let masquerRevenu = document.getElementById('typer');
+                    let btnD = document.querySelector('.depense')
+                    
+                    let btnR = document.querySelector('.revenu')
+                    // // ================================fonction pour masquer la partie depense==================================
+                    
+                    btnR.addEventListener('click', ()=>{
+                        // voir seulement la partie revenu
+                        masquerDepense.style.display = 'none'
+                        // pour masquer la partie depense
+                        masquerRevenu.style.display = 'block'})
+                    
+                    
+                    
+                    // // ================================fonction pour masquer la partie revenu==================================
+                    
+                    btnD.addEventListener('click', ()=>{
+                             // voir seulement la partie depense
+                             masquerDepense.style.display = 'block'
+                            // pour masquer la partie revenu
+                             masquerRevenu.style.display = 'none'
+                    })
+                    // ==============================travail de serifou=====================================
+                    
+                    function ajoutDepense() {
+                      // input
+                    
+                    //   let dateDepense = document.getElementById('datedepense').value;
+                    //   let montantDepense = Number(document.getElementById('montantdepense').value);
+                    
+                      // Mise a jour des despenses
+                    //   const totalDepense = document.getElementById('depense');
+                    //   const currentDepense = parseInt(totalDepense.innerText);
+                    //   totalDepense.innerText = `${(currentDepense + montantDepense)} FCFA`;
+                    
+                      // mise a jour de la date
+                    //   const dateDepenseElement = document.getElementById('dateDepense');
+                    //   dateDepenseElement.innerText = dateDepense;
+                    
+                      // vider le formulair
+                      
+                    //   document.getElementById('datedepense').value = '';
+                    //   document.getElementById('montantdepense').value = '';
+                    
+                    
+                    //   const totalRevenu = document.getElementById('revenu');
+                    //   const currentRevenu = parseInt(totalRevenu.innerText);
+                    //   totalRevenu.innerText = `${(currentRevenu - montant)} FCFA`;
+                    
+                    
+                      
+                      const dateRevenuEl = document.getElementById('dateRevenu');
+                      dateRevenuEl.innerText = date;
+                    
+                    }
+                    
+                    
+                    
+                    
+                    
+                    function ajoutRevenu() {
+                      // input
+                      const dateReve = document.getElementById('daterevenu').value;
+                      const montantReve = parseInt(document.getElementById('montantrevenu').value);
+                    
+                      // Mise a jour des Revenus
+                      const totalRevenu = document.getElementById('revenu');
+                      const currentRevenu = parseInt(totalRevenu.innerText);
+                      totalRevenu.innerText = `${(currentRevenu + montantReve)} FCFA`;
+                    
+                      // mise a jour de la dateReve
+                      const dateRevenuEl = document.getElementById('dateRevenu');
+                      dateRevenuEl.innerText = dateReve;
+                    
+                      // vider le formulair
+                      
+                      document.getElementById('daterevenu').value = '';
+                      document.getElementById('montantrevenu').value = '';
+                    
+                    }
+                    
+                    // 
+                    
+                        </script>
+                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                        crossorigin="anonymous"></script>
+                 
+                </div>
+                   
     
-    // verification
-    const revenue = doc.data();
-    const totalRevenu = document.getElementById('revenu');
-    const currentRevenu = parseInt(totalRevenu.innerHTML);
-    console.log(typeof(currentRevenu));
-    totalRevenu.innerText = `${(currentRevenu + revenue.montantRevenu)} FCFA`;
-    // const dateRevenuEl = document.getElementById('dateRev');
-    // dateRevenuEl.innerText = revenue.date;
-    //  console.log('ddddd' + typeof(revenue.montantRevenu));
-
-
-
-  const daterevenu = document.getElementById('dateRev');
-  daterevenu.innerHTML = doc.data().dateRevenu;
-  console.log('yyyyy' + doc.data().dateRevenu);
-
-  });
-});
-
-
+       
     
 
-  
-
-    // ========================fonction depense============================
-    // let affiches = document.getElementById('affiche');
-    let affiched = document.getElementById('affiched');
-        let btnDepense = document.getElementById('enregistrerdepense');
-            btnDepense.addEventListener('click', function (){
-            //   e.preventDefault();
-          
-        let typeDepense = document.getElementById('typedepense').value;
-        let descriptionDepense = document.getElementById('descriptiondepense').value;
-        let dateDepense = document.getElementById('datedepense').value;
-        let montantDepense = Number (document.getElementById('montantdepense').value);
-    
-        if (!typeDepense || !descriptionDepense || !dateDepense || !montantDepense) {
-            alert("Veuillez remplir tous les champs!");
-            return;
-        }else{
-        addDoc(collection(db, "depenses"), {
-        typeDepense: typeDepense,
-        descriptionDepense: descriptionDepense,
-        dateDepense: dateDepense,
-        montantDepense: montantDepense,
-
-  })
-  
-    }
-    document.getElementById('typedepense').value;
-    document.getElementById('descriptiondepense').value;
-    document.getElementById('datedepense').value;
-    document.getElementById('montantdepense').value;
-
-// getDepenses()
-})
-
-// document.addEventListener('DOMContentLoaded', async function() {
-  // charger les données à partir de la base de données et les afficher sur la page
-  const querySnapshot = await getDocs(collection(db, "depenses"));
-const totalDepense = document.getElementById('montantDep');
-const totalRevenu = document.getElementById('revenu');
-let currentDepense = parseInt(totalDepense.innerHTML);
-let currentRevenu = parseInt(totalRevenu.innerHTML);
-
-querySnapshot.forEach((doc) => {
-  const affichede = `
-    <tr>
-    <td>${doc.data().typeDepense}</td>
-    <td>${doc.data().descriptionDepense}</td>
-    <td>${doc.data().dateDepense}</td>
-    <td>${doc.data().montantDepense}</td>
-    </tr>`;
-  affiched.innerHTML += affichede;
-
-  const montantRevenu = doc.data().montantRevenu;
-  if (!isNaN(montantRevenu)) {
-    currentRevenu += montantRevenu;
-  } else {
-    console.log("La valeur de doc.data().montantRevenu n'est pas un nombre valide !");
-  }
-
-  currentDepense += doc.data().montantDepense;
-  const datedepence = document.getElementById('dateDep');
-  datedepence.innerText = doc.data().dateDepense;
-});
-
-const nvRevenu = `${currentRevenu - currentDepense} FCFA`;
-totalRevenu.innerHTML = nvRevenu;
-totalDepense.innerText = `${currentDepense} FCFA`;
-
-
-// ============================recuperer les btns et le modal pouir les masquer============================
-let masquerDepense = document.getElementById('typed');
-masquerDepense.style.display = 'none'
-let masquerRevenu = document.getElementById('typer');
-let btnD = document.querySelector('.depense')
-
-let btnR = document.querySelector('.revenu')
-// // ================================fonction pour masquer la partie depense==================================
-
-btnR.addEventListener('click', ()=>{
-    // voir seulement la partie revenu
-    masquerDepense.style.display = 'none'
-    // pour masquer la partie depense
-    masquerRevenu.style.display = 'block'})
-
-
-
-// // ================================fonction pour masquer la partie revenu==================================
-
-btnD.addEventListener('click', ()=>{
-         // voir seulement la partie depense
-         masquerDepense.style.display = 'block'
-        // pour masquer la partie revenu
-         masquerRevenu.style.display = 'none'
-})
-// ==============================travail de serifou=====================================
-
-function ajoutDepense() {
-  // input
-
-//   let dateDepense = document.getElementById('datedepense').value;
-//   let montantDepense = Number(document.getElementById('montantdepense').value);
-
-  // Mise a jour des despenses
-//   const totalDepense = document.getElementById('depense');
-//   const currentDepense = parseInt(totalDepense.innerText);
-//   totalDepense.innerText = `${(currentDepense + montantDepense)} FCFA`;
-
-  // mise a jour de la date
-//   const dateDepenseElement = document.getElementById('dateDepense');
-//   dateDepenseElement.innerText = dateDepense;
-
-  // vider le formulair
-  
-//   document.getElementById('datedepense').value = '';
-//   document.getElementById('montantdepense').value = '';
-
-
-//   const totalRevenu = document.getElementById('revenu');
-//   const currentRevenu = parseInt(totalRevenu.innerText);
-//   totalRevenu.innerText = `${(currentRevenu - montant)} FCFA`;
-
-
-  
-  const dateRevenuEl = document.getElementById('dateRevenu');
-  dateRevenuEl.innerText = date;
-
-}
 
 
 
 
 
-function ajoutRevenu() {
-  // input
-  const dateReve = document.getElementById('daterevenu').value;
-  const montantReve = parseInt(document.getElementById('montantrevenu').value);
+        <!-- Optional JavaScript -->
 
-  // Mise a jour des Revenus
-  const totalRevenu = document.getElementById('revenu');
-  const currentRevenu = parseInt(totalRevenu.innerText);
-  totalRevenu.innerText = `${(currentRevenu + montantReve)} FCFA`;
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+       
 
-  // mise a jour de la dateReve
-  const dateRevenuEl = document.getElementById('dateRevenu');
-  dateRevenuEl.innerText = dateReve;
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+             <!--KIT.FONT AWESOME-->
+    <script
+    src="https://kit.fontawesome.com/e5c1f80f7e.js"
+    crossorigin="anonymous"
+  ></script>
+         <script>
+          var tooltipTriggerList = [].slice.call(
+            document.querySelectorAll('[data-bs-toggle="tooltip"]')
+          );
+          var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+          });
+        </script>
+        <script src="./js_gestion.js"></script>
 
-  // vider le formulair
-  
-  document.getElementById('daterevenu').value = '';
-  document.getElementById('montantrevenu').value = '';
-
-}
-
-// 
-
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
-</body>
-
-</html>
+    </body>
+</html> 

@@ -29,7 +29,7 @@ const depart="eleve"
 ajout.addEventListener('click',async (e) => {
     let prenom = document.getElementById('prenom').value;
     let nom = document.getElementById('nom').value;
-    let Telephone = document.getElementById('Telephone').value;
+    let Telephone = Number(document.getElementById('Telephone').value);
     let date = document.getElementById('date').value;
     let adresse = document.getElementById('adresse').value;
     let email = document.getElementById('mail').value;
@@ -84,7 +84,7 @@ afficher()
                       <td class="align-middle">${element.prenom}</td>
                       <td class="align-middle">${element.nom}</td>
                       <td class="align-middle">${element.email}</td>
-                      <td class="align-middle">${element.Telephone}</td>
+                      <td class="align-middle">${element.numero}</td>
                       <td class="align-middle">${element.date}</td>
                       <td class="align-middle">${element.adresse}</td>
                       <td id="${element.id}" class="align-middle">
@@ -145,7 +145,7 @@ afficher()
       console.log(container.prenom);
       prenomam.value=container.prenom
       nomam.value=container.nom
-      Telephoneam.value=container.Telephone
+      Telephoneam.value=container.numero
       dateam.value=container.date
       adresseam.value=container.adresse
       emailam.value=container.email
@@ -226,7 +226,7 @@ async function test(){
                   <td>${element.prenom}</td>
                   <td>${element.nom}</td>
                   <td>${element.email}</td>
-                  <td>${element.Telephone}</td>
+                  <td>${element.numero}</td>
                   <td>${element.date}</td>
                   <td>${element.adresse}</td>
                   <td id="${element.id}">
@@ -263,213 +263,7 @@ async function test(){
 });
 }
  
-// let openmodalbulletin = document.querySelectorAll("#modalbtn");
-// openmodalbulletin.forEach(element => {
-//   element.addEventListener('click', async (e)=>{
 
-//   let cible = e.target.parentNode.parentNode.id;
-//   let colectDoc = await doc(usereleve,cible)
-//   console.log(colectDoc);
-//   const ly = await getDoc(colectDoc);
-//   console.log(ly.data());
-//   let lydoc = ly.data();
-  
-
-
-
-
-//     let ajouter = document.getElementById('ajouter')
-//     ajouter.addEventListener("click", (e) => {
-//       let matmatiere = document.getElementById("matmatiere").value;
-//       let matdevoir = Number(document.getElementById("matdevoir").value);
-//       let matcompo = Number(document.getElementById("matcompo").value);
-//       let matcoef = Number(document.getElementById("matcoef").value); 
-//       let matrang = Number(document.getElementById("matrang").value);
-//       let matappreciation = document.getElementById("matappreciation").value;
-      
-//       let angmatiere = document.getElementById("angmatiere").value;
-//       let angdevoir = Number(document.getElementById("angdevoir").value);
-//       let angcompo = Number(document.getElementById("angcompo").value);
-//       let angcoef = Number(document.getElementById("angcoef").value); 
-//       let angrang = Number(document.getElementById("angrang").value);
-//       let angappreciation = document.getElementById("angappreciation").value;
-      
-//       let hgmatiere = document.getElementById("hgmatiere").value;
-//       let hgdevoir = Number(document.getElementById("hgdevoir").value);
-//       let hgcompo = Number(document.getElementById("hgcompo").value);
-//       let hgcoef = Number(document.getElementById("hgcoef").value); 
-//       let hgrang = Number(document.getElementById("hgrang").value);
-//       let hgappreciation = document.getElementById("hgappreciation").value;
-      
-//       let svtmatiere = document.getElementById("svtmatiere").value;
-//       let svtdevoir = Number(document.getElementById("svtdevoir").value);
-//       let svtcompo = Number(document.getElementById("svtcompo").value);
-//       let svtcoef = Number(document.getElementById("svtcoef").value); 
-//       let svtrang = Number(document.getElementById("svtrang").value);
-//       let svtappreciation = document.getElementById("svtappreciation").value;
-      
-//       let pcmatiere = document.getElementById("pcmatiere").value;
-//       let pcdevoir = Number(document.getElementById("pcdevoir").value);
-//       let pccompo = Number(document.getElementById("pccompo").value);
-//       let pccoef = Number(document.getElementById("pccoef").value); 
-//       let pcrang = Number(document.getElementById("pcrang").value);
-//       let pcappreciation = document.getElementById("pcappreciation").value;
-      
-//       let epsmatiere = document.getElementById("epsmatiere").value;
-//       let epsdevoir = Number(document.getElementById("epsdevoir").value);
-//       let epscompo = Number(document.getElementById("epscompo").value);
-//       let epscoef = Number(document.getElementById("epscoef").value); 
-//       let epsrang = Number(document.getElementById("epsrang").value);
-//       let epsappreciation = document.getElementById("epsappreciation").value;
-      
-      
-//       let frmatiere = document.getElementById("frmatiere").value;
-//       let frdevoir = Number(document.getElementById("frdevoir").value);
-//       let frcompo = Number(document.getElementById("frcompo").value);
-//       let frcoef = Number(document.getElementById("frcoef").value); 
-//       let frrang = Number(document.getElementById("frrang").value);
-//       let frappreciation = document.getElementById("frappreciation").value;
-      
-//       // Vérifier si les champs sont vides
-//       if (matmatiere == "" || matdevoir == ""|| matcompo == ""||matcoef == ""||matrang == ""|| matappreciation == ""  ) {
-//       alert("Veuillez remplir tous les champs !"); 
-//       }
-//       else if (angmatiere == "" || angdevoir == ""|| angcompo == ""||angcoef == ""||angrang == ""|| angappreciation == ""  ) {
-//       alert("Veuillez remplir tous les champs !");
-//       }
-//       else if (hgmatiere == "" || hgdevoir == ""|| hgcompo == ""||hgcoef == ""||hgrang== ""|| hgappreciation == ""  ) {
-//       alert("Veuillez remplir tous les champs !");
-//       }
-//       else if (svtmatiere == "" || svtdevoir == ""|| svtcompo == ""||svtcoef == ""||svtrang == ""|| svtappreciation == ""  ) {
-//       alert("Veuillez remplir tous les champs !");
-//       }
-//       else if (pcmatiere == "" || pcdevoir == ""|| pccompo == ""||pccoef == ""||pcrang == ""|| pcappreciation == ""  ) {
-//       alert("Veuillez remplir tous les champs !");
-//       }
-//       else if (epsmatiere == "" || epsdevoir == ""|| epscompo == ""||epscoef == ""||epsrang == ""|| epsappreciation == ""  ) {
-//       alert("Veuillez remplir tous les champs !");
-//       }else if (frmatiere == "" || frdevoir == ""|| frcompo == ""||frcoef == ""||frrang == ""|| frappreciation == ""  ){
-//       alert("Veuillez remplir tous les champs !");
-//       } else {
-        
-//       // Calculer la moyenne des deux nombres saisis
-//       let matmoyenne = (parseFloat(matdevoir) + parseFloat(matcompo)) / 2;
-//       matmoyenne = matmoyenne.toFixed(2);
-//       let angmoyenne = (parseFloat(angdevoir) + parseFloat(angcompo)) / 2;
-//       angmoyenne = angmoyenne.toFixed(2);
-//       let hgmoyenne = (parseFloat(hgdevoir) + parseFloat(hgcompo)) / 2;
-//       hgmoyenne = hgmoyenne.toFixed(2);
-//       let svtmoyenne = (parseFloat(svtdevoir) + parseFloat(svtcompo)) / 2;
-//       svtmoyenne = svtmoyenne.toFixed(2);
-//       let pcmoyenne = (parseFloat(pcdevoir) + parseFloat(pccompo)) / 2;
-//       pcmoyenne = pcmoyenne.toFixed(2);
-//       let epsmoyenne = (parseFloat(epsdevoir) + parseFloat(epscompo)) / 2;
-//       epsmoyenne = epsmoyenne.toFixed(2);
-//       let frmoyenne = (parseFloat(frdevoir) + parseFloat(frcompo)) / 2;
-//       frmoyenne = frmoyenne.toFixed(2);
-      
-      
-      
-//       // Calculer la moyenneX
-//       let matmoyX = (parseFloat(matmoyenne) * parseFloat(matcoef));
-//       matmoyX = matmoyX.toFixed(2);
-//       let angmoyX = (parseFloat(angmoyenne) * parseFloat(angcoef));
-//       angmoyX = angmoyX.toFixed(2);
-//       let hgmoyX = (parseFloat(hgmoyenne) * parseFloat(hgcoef));
-//       hgmoyX = hgmoyX.toFixed(2);
-//       let svtmoyX = (parseFloat(svtmoyenne) * parseFloat(svtcoef));
-//       svtmoyX = svtmoyX.toFixed(2);
-//       let pcmoyX = (parseFloat(pcmoyenne) * parseFloat(pccoef));
-//       pcmoyX = pcmoyX.toFixed(2);
-//       let epsmoyX = (parseFloat(epsmoyenne) * parseFloat(epscoef));
-//       epsmoyX = epsmoyX.toFixed(2);
-//       let frmoyX = (parseFloat(frmoyenne) * parseFloat(frcoef));
-//       frmoyX = frmoyX.toFixed(2);
-      
-//       addDoc(collection(db, "bulletin"), {
-//       prenom:lydoc.prenom,
-//       nom:lydoc.nom,
-//       date:lydoc.date,
-//       maths: {
-//       matiere: matmatiere,
-//       devoir: matdevoir,
-//       compo: matcompo,
-//       moyenne: matmoyenne,
-//       coef: matcoef,
-//       moyX: matmoyX,
-//       rang: matrang,
-//       appreciation: matappreciation,
-//       },
-//       anglais: {
-//       matiere: angmatiere,
-//       devoir: angdevoir,
-//       compo: angcompo,
-//       moyenne: angmoyenne,
-//       coef: angcoef,
-//       moyX: angmoyX,
-//       rang: angrang,
-//       appreciation: angappreciation,
-//       },
-//       hg: {
-//       matiere: hgmatiere,
-//       devoir: hgdevoir,
-//       compo: hgcompo,
-//       moyenne: hgmoyenne,
-//       coef: hgcoef,
-//       moyX: hgmoyX,
-//       rang: hgrang,
-//       appreciation: hgappreciation,
-//       },
-//       svt: {
-//       matiere: svtmatiere,
-//       devoir: svtdevoir,
-//       compo: svtcompo,
-//       moyenne: svtmoyenne,
-//       coef: svtcoef,
-//       moyX: svtmoyX,
-//       rang: svtrang,
-//       appreciation: svtappreciation,
-//       },
-//       pc: {
-//       matiere: pcmatiere,
-//       devoir: pcdevoir,
-//       compo: pccompo,
-//       moyenne: pcmoyenne,
-//       coef: pccoef,
-//       moyX: pcmoyX,
-//       rang: pcrang,
-//       appreciation: pcappreciation,
-//       },
-//       eps: {
-//       matiere: epsmatiere,
-//       devoir: epsdevoir,
-//       compo: epscompo,
-//       moyenne: epsmoyenne,
-//       coef: epscoef,
-//       moyX: epsmoyX,
-//       rang: epsrang,
-//       appreciation: epsappreciation,
-//       },
-//       francais: {
-//       matiere: frmatiere,
-//       devoir: frdevoir,
-//       compo: frcompo,
-//       moyenne: frmoyenne,
-//       coef: frcoef,
-//       moyX: frmoyX,
-//       rang: frrang,
-//       appreciation: frappreciation,
-//       }
-//       });
-//       alert("Bulletin ajouté!");
-//       vider();
-      
-//       // Vérifier si toutes les matières ont été ajoutées
-//       fermerModal();
-//       }     
-//       });
-//   }) 
-// });
 
 
 async function modifier() {

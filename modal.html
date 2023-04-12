@@ -100,7 +100,48 @@
     src="https://kit.fontawesome.com/e5c1f80f7e.js"
     crossorigin="anonymous"
   ></script>
-       
+     <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+import { getFirestore, addDoc, collection, getDocs,doc,getDoc,query,where, updateDoc,deleteDoc} from "https://www.gstatic.com/firebasejs/9.19.1/firebase-firestore.js";
+import { getStorage, ref, uploadBytes,getDownloadURL } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-storage.js";
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+    apiKey: "AIzaSyDn6PYE_7HYD1pATm1S6DBDjsYMigiBQ00",
+    authDomain: "pointage-1c893.firebaseapp.com",
+    projectId: "pointage-1c893",
+    storageBucket: "pointage-1c893.appspot.com",
+    messagingSenderId: "551841692809",
+    appId: "1:551841692809:web:026a70f6b5880338785a58"
+};
+
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+console.log(db);
+const storage = getStorage();
+const storageRef = ref(storage, 'some-child');
+
+// // 'file' comes from the Blob or File API
+// uploadBytes(storageRef, file).then((snapshot) => {
+//   console.log('Uploaded a blob or file!');
+// });
+getDownloadURL(ref(storage, 'examAPI2.jpg'))
+  .then((url) => {
+
+console.log(url);
+  
+   
+  })
+  .catch((error) => {
+    // Handle any errors
+  });
+
+     </script>  
 
 </body>
 </html>

@@ -383,7 +383,9 @@ async function modifier() {
       frmoyX = frmoyX.toFixed(2);
       let tcoef= matcoef + frcoef + epscoef + svtcoef + pccoef + hgcoef + angcoef ;
       let moy= Number(matmoyX) + Number(angmoyX) + Number(hgmoyX) + Number(svtmoyX) + Number(pcmoyX) + Number(epsmoyX) + Number(frmoyX);
-      let tmoy= moy / tcoef
+      let tmoy1= moy / tcoef;
+      let tmoy= tmoy1.toFixed(2)
+
       addDoc(collection(db, "bulletin"), {
       prenom:lydoc.prenom,
       nom:lydoc.nom,
@@ -459,7 +461,7 @@ async function modifier() {
       appreciation: frappreciation,
       },
       total:{
-        moy:tmoy,
+        moy:Number(tmoy),
         coef:tcoef,
         moyX:moy
       }

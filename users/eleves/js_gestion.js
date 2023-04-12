@@ -14,13 +14,13 @@ import {
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDBApmRQEvhUbztpygJBab7_vFAQLCjVWE",
-    authDomain: "ajout-4f796.firebaseapp.com",
-    projectId: "ajout-4f796",
-    storageBucket: "ajout-4f796.appspot.com",
-    messagingSenderId: "1013523243494",
-    appId: "1:1013523243494:web:9f8ddbf4f5d19e6e5db627"
-  };
+        apiKey: "AIzaSyDn6PYE_7HYD1pATm1S6DBDjsYMigiBQ00",
+        authDomain: "pointage-1c893.firebaseapp.com",
+        projectId: "pointage-1c893",
+        storageBucket: "pointage-1c893.appspot.com",
+        messagingSenderId: "551841692809",
+        appId: "1:551841692809:web:026a70f6b5880338785a58"
+      };
   
 
 // Initialize Firebase
@@ -42,8 +42,8 @@ const usereleve = collection(db,'ajoutEleve');
 
 
 
-const nom = "Mbaye";
-const prenom = "Junior";
+const nom = "Quinte";
+const prenom ="Officia";
 
 const querySnapshot = await getDocs(
   query(
